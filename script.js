@@ -1,12 +1,13 @@
 const developersData = [
   {
     name: "Alice James",
-    programmingLanguage: "Javascript",
+    programmingLanguage: "JavaScript",
     mentorshipType: "Programming_development",
     available: "Yes",
     pricePerHour: 100,
     image: "./images/AliceJames.jpg",
-    bio: "I am Alice James, an experienced JavaScript developer with a passion for creating dynamic and responsive web applications..."
+    bio: "I am Alice James, an experienced JavaScript developer with a passion for creating dynamic and responsive web applications...",
+    deliveryTime: 1
   },
   {
     name: "James Roedan",
@@ -15,7 +16,8 @@ const developersData = [
     available: "No",
     pricePerHour: 60,
     image: "./images/JamesRoedan.jpg",
-    bio: "Hello, I'm James Roedan, a Python enthusiast specializing in backend development and data science..."
+    bio: "Hello, I'm James Roedan, a Python enthusiast specializing in backend development and data science...",
+    deliveryTime: 1
   },
   {
     name: "Charlie Wano",
@@ -24,7 +26,8 @@ const developersData = [
     available: "Yes",
     pricePerHour: 55,
     image: "./images/CharlieWano.jpg",
-    bio: "I'm Charlie Wano, a seasoned Java developer with a focus on enterprise-level applications..."
+    bio: "I'm Charlie Wano, a seasoned Java developer with a focus on enterprise-level applications...",
+    deliveryTime: 24
   },
   {
     name: "David Roberts",
@@ -33,7 +36,8 @@ const developersData = [
     available: "Yes",
     pricePerHour: 45,
     image: "./images/DavidRoberts.jpg",
-    bio: "Greetings! I'm David Roberts, a Ruby developer with a passion for building elegant and maintainable code..."
+    bio: "Greetings! I'm David Roberts, a Ruby developer with a passion for building elegant and maintainable code...",
+    deliveryTime: 48
   },
   {
     name: "Xavi Gonzalez",
@@ -42,7 +46,8 @@ const developersData = [
     available: "No",
     pricePerHour: 65,
     image: "./images/XaviGonzalez.jpg",
-    bio: "Hello, I'm Xavi Gonzalez, a dedicated C# developer specializing in Windows application development and .NET technologies..."
+    bio: "Hello, I'm Xavi Gonzalez, a dedicated C# developer specializing in Windows application development and .NET technologies...",
+    deliveryTime: 48
   },
   {
     name: "Frank Jackson",
@@ -51,7 +56,8 @@ const developersData = [
     available: "Yes",
     pricePerHour: 40,
     image: "./images/FrankJackson.jpg",
-    bio: "I am Frank Jackson, an experienced PHP developer with a strong foundation in backend web development..."
+    bio: "I am Frank Jackson, an experienced PHP developer with a strong foundation in backend web development...",
+    deliveryTime: 24
   },
   {
     name: "Henrich Burchards",
@@ -60,7 +66,8 @@ const developersData = [
     available: "Yes",
     pricePerHour: 55,
     image: "./images/HenrichBurchards.jpg",
-    bio: "Hey there! I'm Henrich Burchards, a Swift developer passionate about crafting delightful iOS applications..."
+    bio: "Hey there! I'm Henrich Burchards, a Swift developer passionate about crafting delightful iOS applications...",
+    deliveryTime: 8
   },
 ];
 
@@ -82,6 +89,7 @@ const developersData = [
         <p>Available: ${developer.available}</p>
         <p>From £${developer.pricePerHour}</p>
         <p>${developer.mentorshipType}</p>
+        <p>Delivery Time:${developer.deliveryTime} delivery</p>
         <img src="${developer.image}">
         `
         developersWidget.append(developerDiv);
@@ -113,25 +121,17 @@ const developersData = [
     function filterDevelopers(){
 
       const mentorshipType = document.getElementById("mentorshipType");
-
       const budgetInput = document.getElementById("budget_input");
       const budgetValue = parseInt(budgetInput.value);
+      const deliveryTimeInput = document.getElementById("delivery-time");
+      const deliveryTimeValue = parseInt(deliveryTimeInput.value);
+      
       budgetInput.addEventListener("keydown", function(event){
         if(event.key === "Enter"){
           filterDevelopers();
         }
       })
-      
-      console.log(budgetValue);
-
-      // if(mentorshipType.value === "Programming_development"){
-      //   const programmingLanguageCheckboxesContainer = document.getElementById("programmingLanguageCheckboxesContainer");
-      //   programmingLanguageCheckboxesContainer.classList.add("block");
-      // }
-
-      const checkboxes = document.querySelectorAll("#programmingLanguageCheckboxesContainer input[type='checkbox']");
-      
-      
+   
      
 
       const selectedLanguages = checkedCheckboxes.map(checkbox => checkbox.id);
@@ -140,7 +140,8 @@ const developersData = [
         return (
             (mentorshipType.value === '' || developer.mentorshipType.includes(mentorshipType.value)) &&
             (selectedLanguages.length === 0 || selectedLanguages.includes(developer.programmingLanguage)) &&
-            (!budgetValue || developer.pricePerHour <= budgetValue) // JOE COME BACK TO THIS.
+            (!budgetValue || developer.pricePerHour <= budgetValue) && 
+            (!deliveryTimeValue || developer.deliveryTime <= deliveryTimeValue)
         );
     });
 
@@ -167,6 +168,7 @@ const developersData = [
               <p>Skill: ${developer.programmingLanguage}</p>
               <p>Available: ${developer.available}</p>
               <p>From £${developer.pricePerHour}</p>
+              <p>Delivery Time:${developer.deliveryTime} delivery</p>
               <img src="${developer.image}">
           `;
   

@@ -18,18 +18,22 @@
     </div>
 
     <!-- Main Slogan -->
-    <div>
-        <p class="main-slogan">Your gateway to software mentorship.</p>
+    <div id="main-slogan">
+        <p>Your gateway to software mentorship.</p>
     </div>
 
     <!-- Input Form Section -->
 
     <div id="input-container">
+        <div id="input-row">
+
+            
+        </div>
 
 
         <div class="column-one">
 
-    <label class="filterFormTitle" for="mentorshipType">What type of mentorship are you looking for?</label>
+    <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
 
         <form id="filterForm">
             <!-- Mentorship Type Selection -->
@@ -41,7 +45,8 @@
 
             <!-- Budget Input -->
          
-                <label for="budget_input">Hourly budget</label>
+            
+    <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
                 <input type="number" id="budget_input" placeholder="£20" value="">
             </div>
  
@@ -49,9 +54,9 @@
             <!-- Programming Languages Checkboxes -->
             <div class="column-two">
 
-                <label class="filterFormTitle" for="mentorshipType">What type of mentorship are you looking for?</label>
+                <label class="filterFormTitle" for="completionTime">Completion Time</label>
 
-                <form id="filterForm">
+                <form id="delivery-time-input">
                     <!-- Mentorship Type Selection -->
                     <select id="delivery-time">
                         <option value="1">1 hr</option>
@@ -61,37 +66,18 @@
                         <option value="null">Unlimited</option>
                     </select>
 
+                    <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
 
-                <div id="languagesContainer">
-                <p id="languagesLabel">Programming Language</p>
-                <div id="checkboxesContainer">
-                    <br>
-                    <div id="javascriptContainer">
-                        <label for="Javascript">Javascript</label>
-                        <input type="checkbox" id="Javascript">
-                    </div>
-                    <div id="pythonContainer">
-                        <label for="Python">Python</label>
-                        <input type="checkbox" id="Python">
-                    </div>
-                    <div id="cSharpContainer">
-                        <label for="C#">C#</label>
-                        <input type="checkbox" id="C#">
-                    </div>
-                    <div id="rubyContainer">
-                        <label for="Ruby">Ruby</label>
-                        <input type="checkbox" id="Ruby">
-                    </div>
-                    <div id="phpContainer">
-                        <label for="PHP">PHP</label>
-                        <input type="checkbox" id="PHP">
-                    </div>
-                    <div id="swiftContainer">
-                        <label for="Swift">Swift</label>
-                        <input type="checkbox" id="Swift">
-                    </div>
-                </div>
-            </div>
+                    <form id="delivery-time-input">
+                        <!-- Mentorship Type Selection -->
+                        <select id="delivery-time">
+                            <option value="1">Python</option>
+                            <option value="8">JavaScript</option>
+                            <option value="24">C#</option>
+                            <option value="48">Ruby</option>
+                            <option value="48">Swift</option>
+                            <option value="null">Unlimited</option>
+                        </select>
 
             <!-- Another filter. -->
          
@@ -99,7 +85,7 @@
             <!-- Filter Button -->
         </div>
         <div class="column-three">
-        <button id="filterButton" onclick="filterDevelopers()">Apply Filters</button>
+        <button id="filterButton" onclick="filterDevelopers()">Search</button>
         </div>
 
         </form>
