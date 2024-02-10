@@ -13,6 +13,7 @@ body {
     text-decoration: none;
     color: black;
     margin-left: 20px;
+    padding: 10px;
 }
 
 #header a {
@@ -53,6 +54,7 @@ li {
 #main-slogan {
     text-align: left;
     margin-left: 20px;
+    padding-left: 10px;
 }
 
 form {
@@ -139,7 +141,7 @@ button:hover {
         width: 100%; 
     }
 
-    .main-slogan {
+#main-slogan {
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: left;
@@ -168,6 +170,7 @@ button:hover {
 .column-one {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
 }
 
 .column-two {

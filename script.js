@@ -90,6 +90,8 @@ function renderDevelopers(developers) {
     });
 }
 
+
+
 const filterButton = document.getElementById("filterButton");
 filterButton.addEventListener("click", function(event) {
     filterDevelopers(event); // Pass the event object
@@ -99,21 +101,24 @@ function filterDevelopers(event) {
     event.preventDefault();
     const mentorshipType = document.getElementById("mentorshipType").value;
     const selectedLanguage = document.getElementById("programmingLanguage").value;
-    const budget = document.getElementById("budget_input").value;
-    const completionTime = document.getElementById("completionTime").value;
+    const budgetValue = parseInt(document.getElementById("budget_input").value);
+    
+    
 
 
     const filteredDevelopers = developersData.filter(developer => {
         return (
             (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
             (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage) &&
-            (budget === '' || developer.pricePerHour <= budget) &&
-            (completionTime === '' || developer.deliveryTime <= completionTime)
+            (isNaN(budgetValue) || developer.pricePerHour <= budgetValue)
+           
         );
     });
 
+    console.log(filteredDevelopers);
     renderDevelopers(filteredDevelopers);
 }
+
 
 
 // FOOTER

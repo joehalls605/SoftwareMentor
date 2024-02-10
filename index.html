@@ -26,60 +26,61 @@
 
     <div id="input-container">
         <div id="input-row">
-
-            
+            <!-- No content inside this div -->
         </div>
 
-
+        <!-- Column One: Mentorship Type and Budget Input -->
         <div class="column-one">
+            <!-- Mentorship Type Label -->
+            <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
+            <!-- Mentorship Type Selection Dropdown -->
+            <form id="filterForm">
+                <select id="mentorshipType">
+                    <option value="Programming_development">Programming Development</option>
+                    <option value="Interview_coaching">Interview Coaching</option>
+                    <option value="Resume_advice">Resume Advice</option>
+                </select>
 
-    <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
-
-        <form id="filterForm">
-            <!-- Mentorship Type Selection -->
-            <select id="mentorshipType">
-                <option value="Programming_development">Programming Development</option>
-                <option value="Interview_coaching">Interview Coaching</option>
-                <option value="Resume_advice">Resume Advice</option>
-            </select>
-
-            <!-- Budget Input -->
-         
-            
-    <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
+                <!-- Budget Input Label -->
+                <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
+                <!-- Budget Input Field -->
                 <input type="number" id="budget_input" placeholder="£20" value="">
             </div>
- 
 
-            <div class="column-two">
-                <label class="filterFormTitle" for="completionTime">Completion Time</label>
-                <select id="completionTime">
-                    <option value="1">1 hr</option>
-                    <option value="8">8 hrs</option>
-                    <option value="24">24 hrs</option>
-                    <option value="48">48 hrs</option>
-                    <option value="null">Unlimited</option>
-                </select>
+        <!-- Column Two: Delivery Time and Programming Language Selection -->
+        <div class="column-two">
+            <!-- Delivery Time Label -->
+            <label class="filterFormTitle" for="deliveryTime">Delivery Time</label>
+            <!-- Delivery Time Selection Dropdown -->
+            <select id="deliveryTime">
+                <option value="1">1 hr</option>
+                <option value="8">8 hrs</option>
+                <option value="24">24 hrs</option>
+                <option value="48">48 hrs</option>
+                <option value="null">Unlimited</option>
+            </select>
             
-                <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
-                <select id="programmingLanguage">
-                    <option value="Python">Python</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="C#">C#</option>
-                    <option value="Ruby">Ruby</option>
-                    <option value="Swift">Swift</option>
-                    <option value="PHP">PHP</option>
-                    <option value="null">Unlimited</option>
-                </select>
-            </div>
+            <!-- Programming Language Specialty Label -->
+            <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
+            <!-- Programming Language Specialty Selection Dropdown -->
+            <select id="programmingLanguage">
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Swift">Swift</option>
+                <option value="PHP">PHP</option>
+                <option value="null">Unlimited</option>
+            </select>
+        </div>
             
+        <!-- Column Three: Filter Button -->
         <div class="column-three">
-        <button id="filterButton" onclick="filterDevelopers()">Search</button>
+            <!-- Filter Button -->
+            <button id="filterButton" onclick="filterDevelopers()">Search</button>
         </div>
 
         </form>
-    </div>
-
     </div>
 
     <!-- Developers Section -->
