@@ -14,7 +14,7 @@
         <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>
+        </ul>   
     </div>
 
     <!-- Main Slogan -->
@@ -51,39 +51,28 @@
             </div>
  
 
-            <!-- Programming Languages Checkboxes -->
             <div class="column-two">
-
                 <label class="filterFormTitle" for="completionTime">Completion Time</label>
-
-                <form id="delivery-time-input">
-                    <!-- Mentorship Type Selection -->
-                    <select id="delivery-time">
-                        <option value="1">1 hr</option>
-                        <option value="8">8 hrs</option>
-                        <option value="24">24 hrs</option>
-                        <option value="48">48 hrs</option>
-                        <option value="null">Unlimited</option>
-                    </select>
-
-                    <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
-
-                    <form id="delivery-time-input">
-                        <!-- Mentorship Type Selection -->
-                        <select id="delivery-time">
-                            <option value="1">Python</option>
-                            <option value="8">JavaScript</option>
-                            <option value="24">C#</option>
-                            <option value="48">Ruby</option>
-                            <option value="48">Swift</option>
-                            <option value="null">Unlimited</option>
-                        </select>
-
-            <!-- Another filter. -->
-         
-
-            <!-- Filter Button -->
-        </div>
+                <select id="completionTime">
+                    <option value="1">1 hr</option>
+                    <option value="8">8 hrs</option>
+                    <option value="24">24 hrs</option>
+                    <option value="48">48 hrs</option>
+                    <option value="null">Unlimited</option>
+                </select>
+            
+                <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
+                <select id="programmingLanguage">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Swift">Swift</option>
+                    <option value="PHP">PHP</option>
+                    <option value="null">Unlimited</option>
+                </select>
+            </div>
+            
         <div class="column-three">
         <button id="filterButton" onclick="filterDevelopers()">Search</button>
         </div>

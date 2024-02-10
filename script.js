@@ -57,7 +57,7 @@ const developersData = [
     pricePerHour: 40,
     image: "./images/FrankJackson.jpg",
     bio: "I am Frank Jackson, an experienced PHP developer with a strong foundation in backend web development...",
-    deliveryTime: 24
+    deliveryTime: 1
   },
   {
     name: "Henrich Burchards",
@@ -71,159 +71,54 @@ const developersData = [
   },
 ];
 
+const developersWidget = document.getElementById("developers");
 
-
-  // DEVELOPERS LIST
-
-  const developersWidget = document.getElementById("developers");
-
-    developersData.forEach(developer => {
+function renderDevelopers(developers) {
+    developersWidget.innerHTML = "";
+    developers.forEach(developer => {
         const developerDiv = document.createElement("div");
         developerDiv.classList.add("developer");
-
-        developerDiv.innerHTML = 
-        `<div>
-        <h3>${developer.name}</h3>
-        <p>${developer.bio}</p>
-        <p>Skill: ${developer.programmingLanguage}</p>
-        <p>Available: ${developer.available}</p>
-        <p>From £${developer.pricePerHour}</p>
-        <p>${developer.mentorshipType}</p>
-        <p>Delivery Time:${developer.deliveryTime} delivery</p>
-        <img src="${developer.image}">
-        `
-        developersWidget.append(developerDiv);
+        developerDiv.innerHTML = `
+            <h3>${developer.name}</h3>
+            <p>${developer.bio}</p>
+            <p>Skill: ${developer.programmingLanguage}</p>
+            <p>Available: ${developer.available}</p>
+            <p>${developer.mentorshipType}</p>
+            <img src="${developer.image}">
+        `;
+        developersWidget.appendChild(developerDiv);
     });
+}
 
-  // DEVELOPERS FILTER
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const languagesContainer = document.getElementById("languagesContainer");
-    const checkboxesContainer = document.getElementById("checkboxesContainer");
-
-    languagesContainer.addEventListener("click", function() {
-        checkboxesContainer.classList.toggle("expanded");
-
-        // if(filterButton.style.display === "none"){
-        //   filterButton.style.display = "block";
-          
-        // }
-        // else{
-        //   filterButton.style.display = "none";
-        // }
-
-        const developersContainer = document.getElementById("developers");
-        developersContainer.style.marginTop = "150px";
-
-    });
+const filterButton = document.getElementById("filterButton");
+filterButton.addEventListener("click", function(event) {
+    filterDevelopers(event); // Pass the event object
 });
 
-    function filterDevelopers(){
+function filterDevelopers(event) {
+    event.preventDefault();
+    const mentorshipType = document.getElementById("mentorshipType").value;
+    const selectedLanguage = document.getElementById("programmingLanguage").value;
+    const budget = document.getElementById("budget_input").value;
+    const completionTime = document.getElementById("completionTime").value;
 
-      const mentorshipType = document.getElementById("mentorshipType");
-      const budgetInput = document.getElementById("budget_input");
-      const budgetValue = parseInt(budgetInput.value);
-      const deliveryTimeInput = document.getElementById("delivery-time");
-      const deliveryTimeValue = parseInt(deliveryTimeInput.value);
-      
-      budgetInput.addEventListener("keydown", function(event){
-        if(event.key === "Enter"){
-          filterDevelopers();
-        }
-      })
-   
-     
 
-      const selectedLanguages = checkedCheckboxes.map(checkbox => checkbox.id);
-    
-      const filteredDevelopers = developersData.filter(developer => {
+    const filteredDevelopers = developersData.filter(developer => {
         return (
-            (mentorshipType.value === '' || developer.mentorshipType.includes(mentorshipType.value)) &&
-            (selectedLanguages.length === 0 || selectedLanguages.includes(developer.programmingLanguage)) &&
-            (!budgetValue || developer.pricePerHour <= budgetValue) && 
-            (!deliveryTimeValue || developer.deliveryTime <= deliveryTimeValue)
+            (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
+            (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage) &&
+            (budget === '' || developer.pricePerHour <= budget) &&
+            (completionTime === '' || developer.deliveryTime <= completionTime)
         );
     });
 
-    console.log(mentorshipType);
-
- // RENDERING THE FILTERED DEVELOPERS
-   
     renderDevelopers(filteredDevelopers);
-    }
-
-    function renderDevelopers(filteredDevelopers) {
-      const developersWidget = document.getElementById("developers");
-      // Clear existing content
-      developersWidget.innerHTML = "";
-  
-      // Render filtered developers
-      filteredDevelopers.forEach(developer => {
-          const developerDiv = document.createElement("div");
-          developerDiv.classList.add("developer");
-  
-          developerDiv.innerHTML = `
-              <h3>${developer.name}</h3>
-              <p>${developer.bio}</p>
-              <p>Skill: ${developer.programmingLanguage}</p>
-              <p>Available: ${developer.available}</p>
-              <p>From £${developer.pricePerHour}</p>
-              <p>Delivery Time:${developer.deliveryTime} delivery</p>
-              <img src="${developer.image}">
-          `;
-  
-          // Add click event listener to developerDiv
-          developerDiv.addEventListener("click", () => showDeveloperDetails(developer, developersWidget));
-  
-          developersWidget.appendChild(developerDiv);
-      });
-  }
-  
-
-  //SHOWING  A SPECIFIC DEVELOPER.
-
-function showDeveloperDetails(developer, developersWidget) {
-    // Clear existing content
-    developersWidget.innerHTML = "";
-
-    const developerDetailDiv = document.createElement("div");
-    developerDetailDiv.classList.add("developer-detail");
-
-    developerDetailDiv.innerHTML = `
-        <h3>${developer.name}</h3>
-        <p>${developer.bio}</p>
-        <p>Skill: ${developer.programmingLanguage}</p>
-        <p>Available: ${developer.available}</p>
-        <p>From £${developer.pricePerHour}</p>
-        <p>${developer.mentorshipType}</p>
-        <img src="${developer.image}">
-        <p>IM A DETAIL VERSION</p>
-    `;
-
-    // Append developerDetailDiv to developersWidget
-    developersWidget.appendChild(developerDetailDiv);
 }
 
 
-    // CONTACT FORM SUBMIT
+// FOOTER
 
-    function submitForm() {
-        const currentSkills = document.getElementById("currentSkills");
-        const desiredSkills = document.getElementById("desiredSkills");
-        const availability = document.getElementById("availability");
-
-        if (!currentSkills || !desiredSkills || !availability) {
-            const error = document.createElement("p");
-            error.textContent = "All fields have to be completed";
-            const notice = document.getElementById("notice");
-            notice.append(error);
-        }
-    }
-
-    // FOOTER
-
-    const footerElement = document.getElementById("footer");
-    const date = new Date().getFullYear();
-    footerElement.append(date);
-    footerElement.append(" Software Mentor. All rights reserved")
-    
+const footerElement = document.getElementById("footer");
+const date = new Date().getFullYear();
+footerElement.append(date);
+footerElement.append(" Software Mentor. All rights reserved");
