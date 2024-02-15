@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Profile</title>
-    <!-- Add any additional styles or scripts here -->
 </head>
 <body>
-    <!-- Content area to display the developer's name -->
-    <div id="developerName"></div>
+    <div id="developerName">
+    <p>Message</p>
+
+
+    </div>
+
+    <!---JOE ADD PROFILE INFO-->
 
     <script>
         // Function to parse URL parameters
         function getURLParameter(name) {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            return urlParams.get(name);
-        }
+        // Get the query string part of the URL, which contains the parameters
+        const queryString = window.location.search;
+
+        // Create a new URLSearchParams object using the query string
+        const urlParams = new URLSearchParams(queryString);
+
+        // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
+        // The name parameter specifies the name of the parameter whose value is being retrieved
+        return urlParams.get(name);
+}
 
         // Retrieve the developer's name from the URL
         const developerName = getURLParameter('developer');
@@ -24,7 +34,7 @@
         // Display the developer's name on the page
         const developerNameElement = document.getElementById('developerName');
         if (developerNameElement) {
-            developerNameElement.textContent = `Developer Name: ${developerName}`;
+            developerNameElement.textContent = `${developerName}`;
         }
     </script>
 </body>

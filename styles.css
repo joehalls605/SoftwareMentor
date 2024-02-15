@@ -26,6 +26,14 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background-color: #F3F3F3;
+    margin-top: 20px;
+    padding: 30px;
+    width: 100%;
+}
+
+#footer p:hover {
+    color: #3c4fcf;
 }
 
 h2 {
@@ -114,15 +122,17 @@ button:hover {
 
 .developer {
     width: 39%; 
-    border: 1px solid #ccc;
+    border: 2px solid  #f0f0f0;
     text-align: left;
     padding: 10px;
     margin: 15px;
     cursor: pointer; /* Add cursor pointer to indicate clickability */
-    transition: background-color 0.3s; /* Add transition for smooth effect */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 .developer:hover {
+    border-color:  #d8d8d8; /* Change border color on hover */
     background-color: #f0f0f0; /* Change background color on hover */
 }
 
@@ -264,6 +274,22 @@ button:hover {
 
 #budget_input{
     text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    #input-container {
+        flex-direction: column;
+    }
+
+    .column-one,
+    .column-two,
+    .column-three {
+        width: 100%;
+    }
+
+    .filter-button-wrapper {
+        margin-top: 20px; /* Adjust as needed */
+    }
 }
 
 

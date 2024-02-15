@@ -94,10 +94,11 @@ function renderDevelopers(developers) {
         developerDiv.innerHTML = `
             <h3>${developer.name}</h3>
             <p>${developer.bio}</p>
-            <div class="programmingLanguage">
+   
+            <img src="${developer.image}">
+                     <div class="programmingLanguage">
             <p>${developer.programmingLanguage}</p>
             </div>
-            <img src="${developer.image}">
         `;
         developersWidget.appendChild(developerDiv);
     });
