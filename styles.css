@@ -125,6 +125,16 @@ button:hover {
     height: auto;
 }
 
+.developer .programmingLanguage {
+    display: inline-block; 
+    background-color: #4859FF;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    margin-bottom: 15px;
+}
+
 #programmingLanguageCheckboxesContainer {
     display: block;
     width: 100%; 
