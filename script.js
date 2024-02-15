@@ -90,6 +90,10 @@ function renderDevelopers(developers) {
     });
 }
 
+renderDevelopers(developersData);
+
+
+
 
 
 const filterButton = document.getElementById("filterButton");
@@ -102,6 +106,7 @@ function filterDevelopers(event) {
     const mentorshipType = document.getElementById("mentorshipType").value;
     const selectedLanguage = document.getElementById("programmingLanguage").value;
     const budgetValue = parseInt(document.getElementById("budget_input").value);
+    console.log("this is the budget" + budgetValue);
     
     
 
@@ -109,7 +114,7 @@ function filterDevelopers(event) {
     const filteredDevelopers = developersData.filter(developer => {
         return (
             (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
-            (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage) &&
+            (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage || selectedLanguage === "Any") &&
             (isNaN(budgetValue) || developer.pricePerHour <= budgetValue)
            
         );
@@ -118,6 +123,8 @@ function filterDevelopers(event) {
     console.log(filteredDevelopers);
     renderDevelopers(filteredDevelopers);
 }
+
+
 
 
 
