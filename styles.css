@@ -127,11 +127,11 @@ button:hover {
 
 .developer .programmingLanguage {
     display: inline-block; 
-    background-color: #4859FF;
+    background-color: lightgray;
     border-radius: 4px;
     padding-left: 10px;
     padding-right: 10px;
-    color: white;
+    color: black;
     margin-bottom: 15px;
 }
 
