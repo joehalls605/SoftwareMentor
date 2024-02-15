@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Profile</title>
+    <!-- Add any additional styles or scripts here -->
+</head>
+<body>
+    <!-- Content area to display the developer's name -->
+    <div id="developerName"></div>
+
+    <script>
+        // Function to parse URL parameters
+        function getURLParameter(name) {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            return urlParams.get(name);
+        }
+
+        // Retrieve the developer's name from the URL
+        const developerName = getURLParameter('developer');
+
+        // Display the developer's name on the page
+        const developerNameElement = document.getElementById('developerName');
+        if (developerNameElement) {
+            developerNameElement.textContent = `Developer Name: ${developerName}`;
+        }
+    </script>
+</body>
+</html>

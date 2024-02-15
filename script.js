@@ -78,6 +78,19 @@ function renderDevelopers(developers) {
     developers.forEach(developer => {
         const developerDiv = document.createElement("div");
         developerDiv.classList.add("developer");
+
+
+    // Create an anchor tag to link to the profile page
+    const profileLink = document.createElement("a");
+    profileLink.href = `profile.html?developer=${developer.name}`;
+    profileLink.textContent = "View Profile";
+
+
+        developerDiv.addEventListener("click", function(){
+          showProfile(developer);
+        });
+
+
         developerDiv.innerHTML = `
             <h3>${developer.name}</h3>
             <p>${developer.bio}</p>
@@ -88,6 +101,10 @@ function renderDevelopers(developers) {
         `;
         developersWidget.appendChild(developerDiv);
     });
+}
+
+function showProfile(developer){
+  window.location.href = `profile.html?developer=${developer.name}`;
 }
 
 renderDevelopers(developersData);

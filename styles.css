@@ -118,6 +118,12 @@ button:hover {
     text-align: left;
     padding: 10px;
     margin: 15px;
+    cursor: pointer; /* Add cursor pointer to indicate clickability */
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+.developer:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
 }
 
 .developer img {
