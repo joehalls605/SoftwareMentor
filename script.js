@@ -94,8 +94,6 @@ renderDevelopers(developersData);
 
 
 
-
-
 const filterButton = document.getElementById("filterButton");
 filterButton.addEventListener("click", function(event) {
     filterDevelopers(event); // Pass the event object
@@ -106,17 +104,15 @@ function filterDevelopers(event) {
     const mentorshipType = document.getElementById("mentorshipType").value;
     const selectedLanguage = document.getElementById("programmingLanguage").value;
     const budgetValue = parseInt(document.getElementById("budget_input").value);
-    console.log("this is the budget" + budgetValue);
+    const deliveryTimeValue = document.getElementById("deliveryTime").value;
     
-    
-
 
     const filteredDevelopers = developersData.filter(developer => {
         return (
             (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
             (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage || selectedLanguage === "Any") &&
-            (isNaN(budgetValue) || developer.pricePerHour <= budgetValue)
-           
+            (isNaN(budgetValue) || developer.pricePerHour <= budgetValue) &&
+            (deliveryTimeValue <= developer.deliveryTime || deliveryTimeValue === "Any")
         );
     });
 
