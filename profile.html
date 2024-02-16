@@ -6,36 +6,52 @@
     <title>Developer Profile</title>
 </head>
 <body>
-    <div id="developerName">
-    <p>Message</p>
-
-
+    <div id="developerProfile">
+        <div id="developerName">
+            <h2></h2>
+        </div>
+        <div id="developerBio">
+            <p></p>
+        </div>
+        <div id="developerLanguage">
+            <p></p>
+        </div>
     </div>
-
-    <!---JOE ADD PROFILE INFO-->
 
     <script>
         // Function to parse URL parameters
         function getURLParameter(name) {
-        // Get the query string part of the URL, which contains the parameters
-        const queryString = window.location.search;
-
-        // Create a new URLSearchParams object using the query string
-        const urlParams = new URLSearchParams(queryString);
-
-        // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
-        // The name parameter specifies the name of the parameter whose value is being retrieved
-        return urlParams.get(name);
-}
-
-        // Retrieve the developer's name from the URL
-        const developerName = getURLParameter('developer');
-
-        // Display the developer's name on the page
-        const developerNameElement = document.getElementById('developerName');
-        if (developerNameElement) {
-            developerNameElement.textContent = `${developerName}`;
+            // Get the query string part of the URL, which contains the parameters
+            const queryString = window.location.search;
+        
+            // Create a new URLSearchParams object using the query string
+            const urlParams = new URLSearchParams(queryString);
+        
+            // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
+            // The name parameter specifies the name of the parameter whose value is being retrieved
+            return urlParams.get(name);
         }
+        
+        // Retrieve the developer's name, bio, and language from the URL
+        const developerName = getURLParameter('developer');
+        const developerBio = getURLParameter('bio');
+        const developerLanguage = getURLParameter('language');
+        console.log("Developer Bio:", developerBio);
+        console.log("Developer Language:", developerLanguage);
+        
+        // Display the developer's name, bio, and language on the page
+        const developerNameElement = document.getElementById('developerName');
+        const developerBioElement = document.getElementById('developerBio');
+        const developerLanguageElement = document.getElementById('developerLanguage');
+        
+        if (developerNameElement && developerBioElement && developerLanguageElement) {
+            developerNameElement.textContent = developerName;
+            developerBioElement.textContent = `${developerBio}`;
+            developerLanguageElement.textContent = `${developerLanguage}`;
+        }
+        
+        // Retrieve and display projects
+        const projects = getURLParameter('projects');
     </script>
 </body>
 </html>

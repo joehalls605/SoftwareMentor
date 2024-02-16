@@ -71,6 +71,7 @@ const developersData = [
   },
 ];
 
+
 const developersWidget = document.getElementById("developers");
 
 function renderDevelopers(developers) {
@@ -105,7 +106,12 @@ function renderDevelopers(developers) {
 }
 
 function showProfile(developer){
-  window.location.href = `profile.html?developer=${developer.name}`;
+  console.log("Developer Bio:", developer.bio);
+  console.log("Developer Language:", developer.programmingLanguage);
+
+  const encodedBio = encodeURIComponent(developer.bio);
+  const encodedLanguage = encodeURIComponent(developer.programmingLanguage);
+  window.location.href = `profile.html?developer=${developer.name}&bio=${encodedBio}&language=${encodedLanguage}`;
 }
 
 renderDevelopers(developersData);
