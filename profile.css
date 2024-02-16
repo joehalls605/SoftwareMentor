@@ -16,3 +16,36 @@
     margin-top: 15px;
     margin-bottom: 5px;
 }
+
+#developerLanguage {
+    display: inline-block; 
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 4px;
+    padding: 10px;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button {
+    display: inline-block; 
+    align-items: center; 
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+    padding: 10px; 
+    border-width: 1px; 
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: background-color 0.3s; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #3c4fcf; 
+    color: white;
+    border-color: transparent;
+    border-width: 1px;
+}

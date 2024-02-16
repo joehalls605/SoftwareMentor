@@ -63,6 +63,7 @@ li {
     text-align: left;
     margin-left: 20px;
     padding-left: 10px;
+    color: #3c4fcf;
 }
 
 form {
@@ -86,7 +87,6 @@ input, select, textarea {
 
 .main-slogan {
     text-align: left;
-    margin-top: 10px;
 }
 
 button {
@@ -290,6 +290,11 @@ button:hover {
     .filter-button-wrapper {
         margin-top: 20px; /* Adjust as needed */
     }
+}
+
+p{
+    padding: 0;
+    margin: 0;
 }
 
 
