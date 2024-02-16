@@ -17,75 +17,72 @@
         </ul>   
     </div>
 
-    <!-- Main Slogan -->
-    <div id="main-slogan">
-        <p>Your gateway to developer mentorship.</p>
-    </div>
+ 
 
     <!-- Input Form Section -->
 
     <div id="input-container">
-        <div id="input-row">
-            <!-- No content inside this div -->
-        </div>
-
-        <!-- Column One: Mentorship Type and Budget Input -->
-        <div class="column-one">
-            <!-- Mentorship Type Label -->
-            <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
-            <!-- Mentorship Type Selection Dropdown -->
-            <form id="filterForm">
-                <select id="mentorshipType">
-                    <option value="Programming_development">Programming Development</option>
-                    <option value="Interview_coaching">Interview Coaching</option>
-                    <option value="Resume_advice">Resume Advice</option>
-                </select>
-
-                <!-- Budget Input Label -->
-                <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
-                <!-- Budget Input Field -->
-                <input type="number" id="budget_input" placeholder="£20" value="">
+        <div class="row-1">
+            <div id="main-slogan">
+                <p>Empower your Software journey with expert mentorship</p>
             </div>
-
-        <!-- Column Two: Delivery Time and Programming Language Selection -->
-        <div class="column-two">
-            <!-- Delivery Time Label -->
-            <label class="filterFormTitle" for="deliveryTime">Delivery Time</label>
-            <!-- Delivery Time Selection Dropdown -->
-            <select id="deliveryTime">
-                <option value="Any">Any</option>
-                <option value="1">1 hr</option>
-                <option value="8">8 hrs</option>
-                <option value="24">24 hrs</option>
-                <option value="48">48 hrs</option>
-                <option value="null">Unlimited</option>
-            </select>
-            
-            <!-- Programming Language Specialty Label -->
-            <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
-            <!-- Programming Language Specialty Selection Dropdown -->
-            <select id="programmingLanguage">
-                <option value="">Any</option>
-                <option value="Python">Python</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="C#">C#</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Swift">Swift</option>
-                <option value="PHP">PHP</option>
-            </select>
         </div>
-            
-        <!-- Column Three: Filter Button -->
-        <div class="column-three">
-            <form id="filterForm">
-                <!-- Filter Button -->
-                <div class="filter-button-wrapper">
-                    <button id="filterButton" onclick="filterDevelopers()">Search</button>
-                </div>
-            </form>
+        <div class="row-2">
+            <div class="column-one">
+                <!-- Mentorship Type Label -->
+                <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
+                <!-- Mentorship Type Selection Dropdown -->
+                <form id="filterForm">
+                    <select id="mentorshipType">
+                        <option value="Programming_development">Programming Development</option>
+                        <option value="Interview_coaching">Interview Coaching</option>
+                        <option value="Resume_advice">Resume Advice</option>
+                    </select>
+    
+                    <!-- Budget Input Label -->
+                    <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
+                    <!-- Budget Input Field -->
+                    <input type="number" id="budget_input" placeholder="£20" value="">
+                </form>
+            </div>
+    
+            <!-- Column Two: Delivery Time and Programming Language Selection -->
+            <div class="column-two">
+                <!-- Delivery Time Label -->
+                <label class="filterFormTitle" for="deliveryTime">Delivery Time</label>
+                <!-- Delivery Time Selection Dropdown -->
+                <select id="deliveryTime">
+                    <option value="Any">Any</option>
+                    <option value="1">1 hr</option>
+                    <option value="8">8 hrs</option>
+                    <option value="24">24 hrs</option>
+                    <option value="48">48 hrs</option>
+                    <option value="null">Unlimited</option>
+                </select>
+                <!-- Programming Language Specialty Label -->
+                <label class="filterFormTitle" for="programmingLanguage">Programming Language Specialty</label>
+                <!-- Programming Language Specialty Selection Dropdown -->
+                <select id="programmingLanguage">
+                    <option value="">Any</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Swift">Swift</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </div>
+                
+            <!-- Column Three: Filter Button -->
+            <div class="column-three">
+                <form id="filterForm">
+                    <!-- Filter Button -->
+                    <div class="filter-button-wrapper">
+                        <button id="filterButton" onclick="filterDevelopers()">Search</button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        </form>
     </div>
 
     <!-- Developers Section -->
