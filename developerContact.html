@@ -20,20 +20,13 @@
         <p>We're here to help with any questions or concerns you may have. Please don't hesitate to contact us.</p>
         <label for="name">Name</label>
         <input type="text" id="currentSkills" name="currentSkills" required>
-        <label for="email" type="email">Email</label>
-        <input type="text" id="contact topic" name="contact topic" >
-        <label for="contact topic">Topic</label>
-        <select>
-            <option value="online">Account</option>
-            <option value="inPerson">Buying on Software Mentor</option>
-            <option value="inPerson">Payments</option>
-            <option value="inPerson">Order management</option>
-            <option value="inPerson">Instructor Review</option>
-            <option value="inPerson">Terms & Conditions</option>
-            <option value="inPerson">Other</option>
+
+        <label for="Developer" type="textarea">Developer</label>
+        <select id="Developer">
+            <option value=""></option>
         </select>
         <label for="availability">Your Message</label>
-        <textarea id="availability" name="availability" rows="4"></textarea>
+        <textarea placeholder="Hello I would like to make a booking." name="availability" rows="4"></textarea>
         <div id="notice"></div>
         <button id="submit" type="submit" onclick="submitForm()">Submit</button>
     </form>
@@ -42,4 +35,28 @@
 <div id="footer">
     <p></p>
   </div>
+  <script>
+
+function getURLParameter(name) {
+            // Get the query string part of the URL, which contains the parameters
+            const queryString = window.location.search;
+        
+            // Create a new URLSearchParams object using the query string
+            const urlParams = new URLSearchParams(queryString);
+        
+            // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
+            // The name parameter specifies the name of the parameter whose value is being retrieved
+            return urlParams.get(name);
+        }
+
+        const developerName = getURLParameter('developer');
+        const developerSelect = document.getElementById("Developer");
+        if(developerName){
+            const option = document.createElement("option");
+            option.textContent = developerName;
+            option.value = developerName;
+            developerSelect.appendChild(option);
+        }
+
+  </script>
 </html>
