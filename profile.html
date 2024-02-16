@@ -16,6 +16,9 @@
         <div id="developerLanguage">
             <p></p>
         </div>
+        <div id="developerImage">
+            <img src="" alt="Developer Image">
+        </div>
     </div>
 
     <script>
@@ -36,18 +39,22 @@
         const developerName = getURLParameter('developer');
         const developerBio = getURLParameter('bio');
         const developerLanguage = getURLParameter('language');
+        const developerImage = decodeURIComponent(getURLParameter('image'));
         console.log("Developer Bio:", developerBio);
         console.log("Developer Language:", developerLanguage);
+        console.log("Developer Image:", developerImage);
         
         // Display the developer's name, bio, and language on the page
         const developerNameElement = document.getElementById('developerName');
         const developerBioElement = document.getElementById('developerBio');
         const developerLanguageElement = document.getElementById('developerLanguage');
+        const developerImageElement = document.getElementById('developerImage').querySelector('img');
         
         if (developerNameElement && developerBioElement && developerLanguageElement) {
             developerNameElement.textContent = developerName;
             developerBioElement.textContent = `${developerBio}`;
             developerLanguageElement.textContent = `${developerLanguage}`;
+            developerImageElement.src = developerImage;
         }
         
         // Retrieve and display projects
