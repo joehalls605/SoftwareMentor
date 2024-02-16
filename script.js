@@ -6,7 +6,7 @@ const developersData = [
     available: "Yes",
     pricePerHour: 100,
     image: "./images/AliceJames.jpg",
-    bio: "I am Alice James, an experienced JavaScript developer with a passion for creating dynamic and responsive web applications. With over a decade of experience in the industry, I've had the opportunity to work on a wide range of projects, from small startups to large-scale enterprise applications. My expertise includes front-end development using modern frameworks like React, Vue, and Angular, as well as server-side programming with Node.js. I'm dedicated to writing clean, efficient code and staying updated with the latest trends in web development.",
+    bio: "Hi there, I'm Alice James, an experienced JavaScript developer with a passion for creating dynamic and responsive web applications. With over a decade of experience in the industry, I've had the opportunity to work on a wide range of projects, from small startups to large-scale enterprise applications. My expertise includes front-end development using modern frameworks like React, Vue, and Angular, as well as server-side programming with Node.js. I'm dedicated to writing clean, efficient code and staying updated with the latest trends in web development.",
     deliveryTime: 1
   },
   {
