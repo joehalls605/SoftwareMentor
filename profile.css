@@ -20,7 +20,7 @@
 #developerLanguage {
     display: inline-block; 
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(206, 169, 255);
     border-radius: 4px;
     padding: 10px;
     color: black;
@@ -35,9 +35,9 @@ button {
     background-color: white;
     border-color: black;
     border-radius: 5px;
-    padding: 10px; 
     border-width: 1px; 
     color: black;
+    margin-top: 10px;
     margin-bottom: 15px;
     text-align: center;
     transition: background-color 0.3s; 

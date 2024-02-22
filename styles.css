@@ -149,7 +149,7 @@ button:hover {
 .developer .programmingLanguage {
     display: inline-block; 
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(206, 169, 255);
     border-radius: 4px;
     padding: 10px;
     color: black;
