@@ -3,6 +3,7 @@ body {
     margin: 20px;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 #header {
@@ -14,6 +15,9 @@ body {
     color: black;
     margin-left: 20px;
     padding: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 #header a {
@@ -25,11 +29,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     background-color: #F3F3F3;
-    margin-top: 20px;
     padding: 30px;
     width: 100%;
+    margin-top: auto;
 }
 
 #footer p:hover {
@@ -304,11 +307,20 @@ p{
 }
 
 #ContactForm {
-    display: flex; /* Use flexbox to align content */
-    flex-direction: column; /* Arrange children vertically */
-    align-items: flex-start; /* Align items to the start (top) of the cross axis */
-    padding: 50px; /* Add padding */
-    
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 50px; 
+}
+
+#message{
+    margin-top: 10px;
+    width: 700px;
+}
+
+#about-body{
+    padding: 30px;
+    padding-top: 80px;
 }
 
 

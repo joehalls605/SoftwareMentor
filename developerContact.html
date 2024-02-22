@@ -16,12 +16,16 @@
     </div>
 
     <form action="#" method="post" id="ContactForm">
-        <h3 class="form-header">Developer Contact</h3>
+        <h3 class="form-header"></h3>
         
         <div id="Developer"></div>
         
-        <label for="availability">Your Message</label>
-        <textarea placeholder="Hello I would like to make a booking." name="availability" rows="4"></textarea>
+        <div id="message">
+            <div id="message-details">
+                <label for="availability">Your Message</label>
+                <textarea placeholder="Hello I would like to make a booking." name="availability" rows="4"></textarea>
+            </div>
+        </div>
         
         <div id="notice"></div>
         <button id="submit" type="submit">Submit</button>
@@ -45,8 +49,8 @@
         }
 
         const developerName = getURLParameter('developer');
-        const developerNameElement = document.getElementById("Developer");
-        developerNameElement.textContent = developerName;
+        const formHeaderElement = document.querySelector(".form-header");
+        formHeaderElement.textContent = developerName;
 
      
     </script>
