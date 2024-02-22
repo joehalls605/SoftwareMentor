@@ -121,6 +121,7 @@ button:hover {
     flex: start;
     flex-wrap: wrap;
     transition: margin-top 0.1s;
+    justify-content: center;
 }
 
 .developer {
@@ -189,10 +190,10 @@ button:hover {
 #input-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     background-color: #F3F3F3;
     width: 100%;
-    padding:30px;
+    padding:50px;
     border-bottom: 1px, solid #E8E8E8;
 }
 
