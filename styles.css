@@ -324,4 +324,11 @@ p{
 }
 
 
+#about-row{
+ display: flex;
+ flex-direction: row;
+}
 
+.about-column {
+    width: 50%;
+}
