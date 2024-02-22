@@ -152,7 +152,7 @@ function filterDevelopers(event) {
 
 // FOOTER
 
-const footerElement = document.getElementById("footer");
-const date = new Date().getFullYear();
-footerElement.append(date);
-footerElement.append(" Software Mentor. All rights reserved");
+// const footerElement = document.getElementById("footer");
+// const date = new Date().getFullYear();
+// footerElement.append(date);
+// footerElement.append(" Software Mentor. All rights reserved");
