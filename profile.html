@@ -9,22 +9,30 @@
 </head>
 <body>
     <div id="developerProfile">
-        <div id="developerName">
-            <h2></h2>
-        </div>
-        <div id="developerBio">
-            <p></p>
-        </div>
-        <div id="developerLanguage">
-            <p></p>
-        </div>
-        <div id="developerImage">
-            <img src="" alt="Developer Image">
-        </div>
-        <div id="developerContact">
-            <button class="contactButton">Book <span id="developerNamePlaceholder"></span></button>
-        </div>
+        <div class="profile-row">
+            <div class="profile-column">
+                <div id="developerName">
+                    <h2></h2>
+                </div>
+                <div id="developerLanguage">
+                    <p></p>
+                </div>
+                <div id="developerBio">
+                    <p></p>
+                </div>
+               
+            </div>
+            <div class="profile-column">
+                <div id="developerImage">
+                    <img src="" alt="Developer Image">
+                </div>
+                <div id="developerContact">
+                    <button class="contactButton">Book <span id="developerNamePlaceholder"></span></button>
+                </div>
+            </div>
+        </div>   
     </div>
+    
 
     <script>
         // Function to parse URL parameters
@@ -78,6 +86,8 @@
         const projects = getURLParameter('projects');
       
     </script>
-    
+      <div id="footer">
+        <p></p>
+    </div>
 </body>
 </html>

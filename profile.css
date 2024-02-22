@@ -24,7 +24,8 @@
     border-radius: 4px;
     padding: 10px;
     color: black;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -48,4 +49,14 @@ button:hover {
     color: white;
     border-color: transparent;
     border-width: 1px;
+}
+
+.profile-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-column {
+    width: 50%;
+    margin: 10px;
 }
