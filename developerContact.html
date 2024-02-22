@@ -17,27 +17,22 @@
 
     <form action="#" method="post" id="ContactForm">
         <h3 class="form-header">Developer Contact</h3>
-        <p>We're here to help with any questions or concerns you may have. Please don't hesitate to contact us.</p>
-        <label for="name">Name</label>
-        <input type="text" id="currentSkills" name="currentSkills" required>
-
-        <label for="Developer" type="textarea">Developer</label>
-        <select id="Developer">
-            <option value=""></option>
-        </select>
+        
+        <div id="Developer"></div>
+        
         <label for="availability">Your Message</label>
         <textarea placeholder="Hello I would like to make a booking." name="availability" rows="4"></textarea>
+        
         <div id="notice"></div>
-        <button id="submit" type="submit" onclick="submitForm()">Submit</button>
+        <button id="submit" type="submit">Submit</button>
     </form>
 
-</body>
-<div id="footer">
-    <p></p>
-  </div>
-  <script>
+    <div id="footer">
+        <p>Test</p>
+    </div>
 
-function getURLParameter(name) {
+    <script>
+        function getURLParameter(name) {
             // Get the query string part of the URL, which contains the parameters
             const queryString = window.location.search;
         
@@ -50,13 +45,10 @@ function getURLParameter(name) {
         }
 
         const developerName = getURLParameter('developer');
-        const developerSelect = document.getElementById("Developer");
-        if(developerName){
-            const option = document.createElement("option");
-            option.textContent = developerName;
-            option.value = developerName;
-            developerSelect.appendChild(option);
-        }
+        const developerNameElement = document.getElementById("Developer");
+        developerNameElement.textContent = developerName;
 
-  </script>
+     
+    </script>
+</body>
 </html>

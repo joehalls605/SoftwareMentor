@@ -303,5 +303,13 @@ p{
     margin: 0;
 }
 
+#ContactForm {
+    display: flex; /* Use flexbox to align content */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: flex-start; /* Align items to the start (top) of the cross axis */
+    padding: 50px; /* Add padding */
+    
+}
+
 
 
