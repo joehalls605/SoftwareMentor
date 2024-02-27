@@ -192,6 +192,7 @@ button:hover {
     width: 100%;
     padding: 50px;
     border-bottom: 1px, solid #E8E8E8;
+    padding-left: 120px;
 }
 
 .row-1 {
