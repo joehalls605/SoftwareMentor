@@ -316,6 +316,7 @@ p {
 #about-row {
     display: flex;
     flex-direction: row;
+    margin-left: 40px;
 }
 
 .about-column {
@@ -327,7 +328,7 @@ p {
     flex-direction: row;
     justify-content: center;
     margin-top: auto;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 body {
