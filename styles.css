@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #header {
@@ -32,7 +33,6 @@ body {
     justify-content: center;
     background-color: #F3F3F3;
     padding: 30px;
-    margin-top: auto;
 }
 
 #footer p:hover {
@@ -99,15 +99,15 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Add transition for smooth effect */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #3c4fcf; /* Darken the background color on hover */
+    background-color: #3c4fcf;
 }
 
-#filterButton{
+#filterButton {
     margin-top: 30px;
     margin-left: 40px;
     width: 150px;
@@ -125,21 +125,19 @@ button:hover {
 }
 
 .developer {
-    width: 39%; 
-    border: 2px solid  #f0f0f0;
+    width: 39%;
+    border: 2px solid #f0f0f0;
     text-align: left;
     padding: 10px;
     margin: 15px;
-    cursor: pointer; /* Add cursor pointer to indicate clickability */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .developer:hover {
-    border-color:  #d8d8d8; /* Change border color on hover */
-    background-color: #f0f0f0; /* Change background color on hover */
+    border-color: #d8d8d8;
+    background-color: #f0f0f0;
 }
 
 .developer img {
@@ -148,7 +146,7 @@ button:hover {
 }
 
 .developer .programmingLanguage {
-    display: inline-block; 
+    display: inline-block;
     align-items: center;
     background-color: rgb(206, 169, 255);
     border-radius: 4px;
@@ -160,27 +158,26 @@ button:hover {
 
 #programmingLanguageCheckboxesContainer {
     display: block;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 600px) {
     #developers {
-        justify-content: center; 
-        margin: 0; 
+        justify-content: center;
+        margin: 0;
     }
 
     .developer {
-        width: 100%; 
+        width: 100%;
     }
 
-#main-slogan {
+    #main-slogan {
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: left;
     }
 
-    
     #filterForm,
     #filterForm label {
         text-align: left;
@@ -193,17 +190,17 @@ button:hover {
     margin-bottom: 40px;
     background-color: #F3F3F3;
     width: 100%;
-    padding:50px;
+    padding: 50px;
     border-bottom: 1px, solid #E8E8E8;
 }
 
-.row-1{
-    display: flex; 
+.row-1 {
+    display: flex;
     flex-direction: row;
 }
 
 .row-2 {
-    display: flex; 
+    display: flex;
     flex-direction: row;
 }
 
@@ -219,19 +216,18 @@ button:hover {
 }
 
 #languagesLabel {
-    border-radius: 3px; 
+    border-radius: 3px;
     font-size: small;
-    width: 450px; 
+    width: 450px;
     height: 3px;
     margin-left: 7px;
     padding-bottom: 4px;
-    
 }
 
 #checkboxesContainer {
     display: flex;
-    flex-direction: column; /* Align checkboxes vertically */
-    align-items: flex-start; /* Align checkboxes to the start (left side) */
+    flex-direction: column;
+    align-items: flex-start;
     display: none;
     font-size: small;
     width: 100%;
@@ -240,15 +236,13 @@ button:hover {
 }
 
 #checkboxesContainer div {
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Align items vertically */
-    margin-bottom: 5px; /* Add some spacing between checkboxes */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 #checkboxesContainer label {
-    margin-right: 10px; /* Add some spacing between label and checkbox */
-
-    
+    margin-right: 10px;
 }
 
 #checkboxesContainer.expanded {
@@ -257,34 +251,27 @@ button:hover {
     width: 450px;
     background-color: white;
     margin-left: 1px;
-    max-height: 400px; 
+    max-height: 400px;
     padding: 10px;
     background-color: white;
-    
-
 }
 
 #languagesContainer {
     border: 1px solid #747474;
     border-radius: 3px;
     font-size: small;
-    width: auto; 
+    width: auto;
     margin-bottom: 16px;
     margin-top: 27px;
     background-color: white;
-
 }
 
-
-
 #checkboxesContainer div:hover {
-    background-color: #007bff; /* Adjust the blue color as needed */
+    background-color: #007bff;
     color: #fff;
 }
 
-
-
-#budget_input{
+#budget_input {
     text-align: left;
 }
 
@@ -300,36 +287,35 @@ button:hover {
     }
 
     .filter-button-wrapper {
-        margin-top: 20px; /* Adjust as needed */
+        margin-top: 20px;
     }
 }
 
-p{
+p {
     padding: 0;
     margin: 0;
 }
 
 #ContactForm {
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    padding: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
 }
 
-#message{
+#message {
     margin-top: 10px;
     width: 700px;
 }
 
-#about-body{
+#about-body {
     padding: 30px;
     padding-top: 80px;
 }
 
-
-#about-row{
- display: flex;
- flex-direction: row;
+#about-row {
+    display: flex;
+    flex-direction: row;
 }
 
 .about-column {
@@ -339,25 +325,33 @@ p{
 .contact-row {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center the columns horizontally */
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-right-column {
-    width: 500px; /* Adjust the width as desired */
-    margin-left: 20px; /* Add margin to separate from the left column */
+    width: 500px;
+    margin-left: 20px;
 }
 
 .contact-left-column {
-    width: 550px; /* Adjust the width as desired */
+    width: 550px;
 }
 
 #contact-body {
     padding-top: 80px;
 }
 
-#message{
+#message {
     width: 450px;
 }
-
-
-
