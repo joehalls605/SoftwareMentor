@@ -96,6 +96,7 @@ function renderDevelopers(developers) {
         developerDiv.innerHTML = `
             <h3>${developer.name}</h3>
             <p>${shortenedBio}</p>
+            <br>
    
             <img src="${developer.image}">
                      <div class="programmingLanguage">

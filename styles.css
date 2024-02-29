@@ -360,6 +360,25 @@ p {
     padding-top: 80px;
 }
 
+
+.submission-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.submission-column {
+    width: 500px;
+    margin-bottom: 40px;
+}
+
 #message {
     width: 450px;
+}
+
+#developerProfile{
+    height: 700px;
 }

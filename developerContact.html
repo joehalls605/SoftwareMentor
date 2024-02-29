@@ -52,6 +52,36 @@
         const formHeaderElement = document.querySelector(".form-header");
         formHeaderElement.textContent = developerName;
 
+        //FORM Submission
+
+        document.getElementById("ContactForm").addEventListener("submit", function(event){
+            event.preventDefault(); // prevent default submission
+
+            //gathering the data
+            const formData = new FormData(this);
+
+            //construct the query string form data
+            const queryString = new URLSearchParams(formData).toString();
+
+            window.location.href = "submission.html?" + queryString;
+
+            // Make GET request to test endpoint (replace with my actual endpoint)
+
+            fetch("https://example.com/test?" + queryString).then(
+                response => {
+                    if(!response.ok){
+                        throw new Error("Network response was not ok")
+                    }
+                    return response.json();
+                }).then(data => { // handle response data
+                    console.log(data)
+                    document.getElementById("notice").innerText = "Request sent sucessfully"
+                }).catch( error => {
+                    console.error("There was a problem with the fetch operation", error);
+                    document.getElementById("notice").innerText = "Error: Request failed";
+                })
+        });
+
      
     </script>
 </body>
