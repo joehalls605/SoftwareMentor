@@ -7,6 +7,7 @@ body {
     flex-direction: column;
 }
 
+
 #header {
     display: flex;
     align-items: flex-start;
@@ -118,10 +119,10 @@ button:hover {
 
 #developers {
     display: flex;
-    flex: start;
     flex-wrap: wrap;
-    transition: margin-top 0.1s;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
 }
 
 .developer {
@@ -192,17 +193,21 @@ label{
     text-align: left;
 }
 
+#header ul {
+    margin-right: 20px;
+}
+
 #input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
     background-color: #F3F3F3;
     width: 100%;
-    padding: 50px;
-    border-bottom: 1px, solid #E8E8E8;
-    padding-left: 120px;
+    padding: 50px 80px;
+    border-bottom: 1px solid #E8E8E8;
     text-align: left;
 }
+
 
 .row-1 {
     display: flex;
@@ -340,15 +345,6 @@ p {
     justify-content: center;
     margin-top: auto;
     margin-bottom: 100px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .contact-right-column {
