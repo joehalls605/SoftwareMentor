@@ -5,6 +5,7 @@
     padding: 10px;
     margin: 15px;
     font-family:sans-serif;
+    height: 700px;
 }
 
 #developerName{
@@ -59,4 +60,8 @@ button:hover {
 .profile-column {
     width: 50%;
     margin: 10px;
+}
+
+.contactButton{
+    margin-top: 10px;
 }
