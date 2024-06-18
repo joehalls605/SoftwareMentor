@@ -21,13 +21,10 @@
                 <div id="developerName">
                     <h2></h2>
                 </div>
-                
                 <div id="developerBio">
                     <p></p>
                 </div>
-                <div id="developerLanguage">
-                    <p></p>
-                </div>
+               
                 <div id="developerContact">
                     <button class="contactButton">Book <span id="developerNamePlaceholder"></span></button>
                 </div>
@@ -37,8 +34,10 @@
                 <div id="developerImage">
                     <img src="" alt="Developer Image">
                 </div>
-             
-            
+                <div id="developerLanguageImage">
+                    <p>Skills:</p>
+                    <img src="" alt="Developer Image Language">
+                </div>
             </div>
         </div>   
     </div>
@@ -65,23 +64,26 @@
         // Retrieve the developer's name, bio, and language from the URL
         const developerName = getURLParameter('developer');
         const developerBio = getURLParameter('bio');
-        const developerLanguage = getURLParameter('language');
+        // const developerLanguage = getURLParameter('language');
         const developerImage = decodeURIComponent(getURLParameter('image'));
+        const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
         console.log("Developer Bio:", developerBio);
-        console.log("Developer Language:", developerLanguage);
+        // console.log("Developer Language:", developerLanguage);
         console.log("Developer Image:", developerImage);
         
         // Display the developer's name, bio, and language on the page
         const developerNameElement = document.getElementById('developerName');
         const developerBioElement = document.getElementById('developerBio');
-        const developerLanguageElement = document.getElementById('developerLanguage');
+        // const developerLanguageElement = document.getElementById('developerLanguage');
         const developerImageElement = document.getElementById('developerImage').querySelector('img');
+        const developerLanguageImageElement = document.getElementById('developerLanguageImage').querySelector('img');
         
-        if (developerNameElement && developerBioElement && developerLanguageElement) {
+        if (developerNameElement && developerBioElement) {
             developerNameElement.textContent = developerName;
             developerBioElement.textContent = `${developerBio}`;
-            developerLanguageElement.textContent = `${developerLanguage}`;
+            // developerLanguageElement.textContent = `${developerLanguage}`;
             developerImageElement.src = developerImage;
+            developerLanguageImageElement.src = developerLanguageImage;
         }
     
         // Set the text content of the developer name placeholder

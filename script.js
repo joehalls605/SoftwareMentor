@@ -2,6 +2,8 @@ const developersData = [
   {
     name: "Alice James",
     programmingLanguage: "JavaScript",
+    programmingLanguageImage: "./images/logos/javaScript.png",
+    image: "./images/AliceJames.png",
     mentorshipType: "Programming_development",
     available: "Yes",
     pricePerHour: 100,
@@ -12,6 +14,7 @@ const developersData = [
   {
     name: "James Roedan",
     programmingLanguage: "Python",
+    programmingLanguageImage: "./images/logos/python.png",
     mentorshipType: "Programming_development",
     available: "No",
     pricePerHour: 60,
@@ -22,6 +25,7 @@ const developersData = [
   {
     name: "Charlie Wano",
     programmingLanguage: "Java",
+    programmingLanguageImage: "./images/logos/java-.png",
     mentorshipType: "Programming_development",
     available: "Yes",
     pricePerHour: 55,
@@ -32,6 +36,7 @@ const developersData = [
   {
     name: "Christina Roof",
     programmingLanguage: "Ruby",
+    programmingLanguageImage: "./images/logos/ruby.png",
     mentorshipType: "Programming_development",
     available: "Yes",
     pricePerHour: 45,
@@ -42,6 +47,7 @@ const developersData = [
   {
     name: "Xavi Gonzalez",
     programmingLanguage: "C#",
+    programmingLanguageImage: "./images/logos/cSharp.png",
     mentorshipType: "Resume_advice",
     available: "No",
     pricePerHour: 65,
@@ -51,22 +57,24 @@ const developersData = [
   },
   {
     name: "Frank Jackson",
-    programmingLanguage: "PHP",
+    programmingLanguage: "Python",
+    programmingLanguageImage: "./images/logos/python.png",
     mentorshipType: "Interview_coaching",
     available: "Yes",
     pricePerHour: 40,
     image: "./images/FrankJackson.png",
-    bio: "I am Frank Jackson, an experienced PHP developer with a strong foundation in backend web development. Over the past ten years, I've built custom web applications for clients across various industries, from e-commerce platforms to content management systems. My expertise includes PHP frameworks like Laravel and Symfony, as well as frontend technologies like JavaScript and React. I'm passionate about writing clean, maintainable code and solving complex problems to deliver exceptional software solutions.",
+    bio: "I am Frank Jackson, an experienced Python developer with a strong foundation in backend web development. Over the past ten years, I've built custom web applications for clients across various industries, from e-commerce platforms to content management systems.",
     deliveryTime: 1
   },
   {
     name: "Henrich Burchards",
-    programmingLanguage: "Swift",
+    programmingLanguage: "Ruby",
+    programmingLanguageImage: "./images/logos/ruby.png",
     mentorshipType: "Programming_development",
     available: "Yes",
     pricePerHour: 55,
     image: "./images/HenrichBurchards.png",
-    bio: "Hey there! I'm Henrich Burchards, a Swift developer passionate about crafting delightful iOS applications. With a background in mobile app development and a keen eye for design, I've had the privilege of working on numerous iOS projects, ranging from consumer apps to enterprise solutions. My expertise includes Swift programming, UIKit, CoreData, and integrating third-party libraries. I'm dedicated to creating user-centric experiences that combine functionality with aesthetics.",
+    bio: "Hey there! I'm Henrich Burchards, a Ruby developer passionate about crafting delightful pplications. With a background in mobile app development and a keen eye for design, I've had the privilege of working on numerous projects, ranging from consumer apps to enterprise solutions.",
     deliveryTime: 8
   },
 ];
@@ -98,9 +106,9 @@ function renderDevelopers(developers) {
             <p>${shortenedBio}</p>
             <br>
    
-            <img src="${developer.image}">
+            <img src="${developer.image} ">
                      <div class="programmingLanguage">
-            <p>${developer.programmingLanguage}</p>
+            <image src="${developer.programmingLanguageImage}">
             </div>
         `;
         developersWidget.appendChild(developerDiv);
@@ -114,7 +122,8 @@ function showProfile(developer){
   const encodedImage = encodeURIComponent(developer.image);
   const encodedBio = encodeURIComponent(developer.bio);
   const encodedLanguage = encodeURIComponent(developer.programmingLanguage);
-  window.location.href = `profile.html?developer=${developer.name}&bio=${encodedBio}&language=${encodedLanguage}&image=${encodedImage}`;
+  const encodedLanguageImage = encodeURIComponent(developer.programmingLanguageImage);
+  window.location.href = `profile.html?developer=${developer.name}&bio=${encodedBio}&language=${encodedLanguage}&image=${encodedImage}&languageImage=${encodedLanguageImage}`;
 }
 
 renderDevelopers(developersData);

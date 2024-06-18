@@ -142,14 +142,14 @@ button:hover {
 }
 
 .developer img {
-    width: 100%;
-    height: auto;
+    width: 300px;  /* New size */
+    height: 300px; /* New size */
+    object-fit: contain; /* Ensure the image is not distorted */
 }
 
 .developer .programmingLanguage {
     display: inline-block;
     align-items: center;
-    background-color: rgb(206, 169, 255);
     border-radius: 4px;
     padding: 10px;
     color: black;
@@ -161,6 +161,36 @@ button:hover {
     display: block;
     width: 100%;
     box-sizing: border-box;
+}
+
+.programmingLanguage {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 10px;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.programmingLanguage p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.programmingLanguage img {
+    width: 45px;
+    height: 46px;
+}
+
+#developerLanguageImage{
+    
+}
+
+#developerProfile #developerLanguageImage img{
+    width: 97px;
+    height: 98px;
 }
 
 @media only screen and (max-width: 600px) {
