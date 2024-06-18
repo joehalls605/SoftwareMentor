@@ -26,9 +26,20 @@
             <div id="main-slogan">
                 <p>Accelerate your software journey with tailored mentorship</p>
             </div>
-        </div>
+          </div>
         <div class="row-2">
-            <div class="column-one">
+            <div class="column">
+                <div>
+                    <ul class="vertical-list">
+                        <li>✅ Verified experts</li>
+                        <li>🏆 Proven Track Record</li>
+                        <li>🎓 Personalized Learning</li>
+                        <li>💂🏼 United Kingdom based</li>
+                        <li>💻 Hands-on Coding Practice</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
                 <!-- Mentorship Type Label -->
                 <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
                 <!-- Mentorship Type Selection Dropdown -->
@@ -46,7 +57,7 @@
             </div>
     
             <!-- Column Two: Delivery Time and Programming Language Selection -->
-            <div class="column-two">
+            <div class="column">
                 <!-- Delivery Time Label -->
                 <label class="filterFormTitle" for="deliveryTime">Delivery Time</label>
                 <!-- Delivery Time Selection Dropdown -->
@@ -73,18 +84,23 @@
             </div>
                 
             <!-- Column Three: Filter Button -->
-            <div class="column-three">
+            <div class="column">
                 <form id="filterForm">
                     <!-- Filter Button -->
                     <div class="filter-button-wrapper">
-                        <button id="filterButton" onclick="filterDevelopers()">Search</button>
+                        <button id="filterButton" onclick="filterDevelopers()">Find your Mentor
+                            <img src="./images/logos/arrow.png">
+                        </button>
                     </div>
                 </form>
             </div>
+            
         </div>
     </div>
 
-
+    <div class="content-row">
+        <h2>Expert Mentors for Your Success</h2>
+    </div>
     <!-- Developers Section -->
     <div id="developers"></div>
 
