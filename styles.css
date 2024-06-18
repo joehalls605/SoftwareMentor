@@ -104,8 +104,11 @@ button {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background-color: #3c4fcf;
+.button-basic {
+    color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 #filterButton {
@@ -256,6 +259,9 @@ label{
 
 .content-row{
     margin-left: 95px;
+}
+.content-row p{
+    margin-top: 20px;
 }
 
 .row-2 {
@@ -435,4 +441,19 @@ p {
     width: 450px;
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
 
+.grid-item {
+    background-color: #E8E8E8;
+    padding: 20px;
+    text-align: center;
+}
+
+.services-row{
+    margin-left: 30px;
+}
