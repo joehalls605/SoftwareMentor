@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Profile</title>
-    <link rel = "stylesheet" href="profile.css"> 
-    <link rel = "stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="header">
@@ -25,11 +25,9 @@
                 <div id="developerBio">
                     <p></p>
                 </div>
-               
                 <div id="developerContact">
                     <button class="contactButton" onclick="bookDeveloperAndRedirect()">Book <span id="developerNamePlaceholder"></span></button>
                 </div>
-               
             </div>
             <div class="profile-column">
                 <div id="developerImage">
@@ -40,79 +38,53 @@
                     <img src="" alt="Developer Image Language">
                 </div>
             </div>
-        </div>   
+        </div>
     </div>
-          
     <div id="footer">
         <p>Software Mentor. All rights reserved</p>
     </div>
-    
 
     <script>
-        // Function to parse URL parameters
         function getURLParameter(name) {
-            // Get the query string part of the URL, which contains the parameters
             const queryString = window.location.search;
-        
-            // Create a new URLSearchParams object using the query string
             const urlParams = new URLSearchParams(queryString);
-        
-            // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
-            // The name parameter specifies the name of the parameter whose value is being retrieved
             return urlParams.get(name);
         }
-    
-        // Retrieve the developer's name, bio, and language from the URL
+
         const developerName = getURLParameter('developer');
         const developerBio = getURLParameter('bio');
-        // const developerLanguage = getURLParameter('language');
         const developerImage = decodeURIComponent(getURLParameter('image'));
         const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
-        console.log("Developer Bio:", developerBio);
-        // console.log("Developer Language:", developerLanguage);
-        console.log("Developer Image:", developerImage);
-        
-        // Display the developer's name, bio, and language on the page
-        const developerNameElement = document.getElementById('developerName');
-        const developerBioElement = document.getElementById('developerBio');
-        // const developerLanguageElement = document.getElementById('developerLanguage');
+
+        const developerNameElement = document.getElementById('developerName').querySelector('h2');
+        const developerBioElement = document.getElementById('developerBio').querySelector('p');
         const developerImageElement = document.getElementById('developerImage').querySelector('img');
         const developerLanguageImageElement = document.getElementById('developerLanguageImage').querySelector('img');
-        
+
         if (developerNameElement && developerBioElement) {
             developerNameElement.textContent = developerName;
-            developerBioElement.textContent = `${developerBio}`;
-            // developerLanguageElement.textContent = `${developerLanguage}`;
+            developerBioElement.textContent = developerBio;
             developerImageElement.src = developerImage;
             developerLanguageImageElement.src = developerLanguageImage;
         }
-    
-        // Set the text content of the developer name placeholder
+
         const developerNamePlaceholder = document.getElementById("developerNamePlaceholder");
-        if(developerNamePlaceholder){
+        if (developerNamePlaceholder) {
             developerNamePlaceholder.textContent = developerName;
         }
-    
-        const developerContactButton = document.querySelector(".contactButton");
-        developerContactButton.addEventListener("click", function(){
-            const url = `developerContact.html?developer=${developerName}&bio=${encodeURIComponent(developerBio)}&language=${encodeURIComponent(developerLanguage)}&image=${encodeURIComponent(developerImage)}`;
-            window.location.href = url;
-        });
-    
-        // Retrieve and display projects
-        const projects = getURLParameter('projects');
-      
+
         function bookDeveloperAndRedirect() {
-            const developerName = getURLParameter('developer');
-            console.log('Developer Name:', developerName); // Check developerName in console for debugging
+            const encodedBio = encodeURIComponent(developerBio);
+            const encodedLanguageImage = encodeURIComponent(developerLanguageImage);
+            const encodedImage = encodeURIComponent(developerImage);
 
             if (developerName) {
-                window.location.href = './enrollment.html?developer=' + encodeURIComponent(developerName);
+                const url = `enrollment.html?developer=${developerName}&bio=${encodedBio}&image=${encodedImage}&languageImage=${encodedLanguageImage}`;
+                window.location.href = url;
             } else {
                 console.error('Developer name not found in URL.');
             }
         }
     </script>
-    
 </body>
 </html>

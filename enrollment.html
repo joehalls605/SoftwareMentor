@@ -18,11 +18,10 @@
     <div class="contact-row">
         <div class="contact-left-column">
             <form action="#" method="post" id="ContactForm" onsubmit="submitForm(event)">
-                <h2 class="developer-header">Book </h2>
+                <h2 class="developer-header">Book</h2>
                 <div class="developer-details">
                     ADD DEVELOPER DETAILS HERE
                 </div>
-                <br>
                 <br>
                 <label for="name">Name</label>
                 <input type="text" id="currentSkills" name="currentSkills" required>
@@ -45,24 +44,18 @@
     </div>
     <script>
         function getURLParameter(name) {
-            // Get the query string part of the URL, which contains the parameters
             const queryString = window.location.search;
-        
-            // Create a new URLSearchParams object using the query string
             const urlParams = new URLSearchParams(queryString);
-        
-            // Use the get() method of URLSearchParams to retrieve the value of the specified parameter
-            // The name parameter specifies the name of the parameter whose value is being retrieved
             return urlParams.get(name);
         }
 
         const developerName = getURLParameter('developer');
         const formHeaderElement = document.querySelector(".developer-header");
-        if(formHeaderElement){
+        if (formHeaderElement) {
             formHeaderElement.textContent += " " + developerName;
         }
 
-        function submitForm(event){
+        function submitForm(event) {
             event.preventDefault();
             const leftColumnElement = document.querySelector(".contact-left-column");
             leftColumnElement.innerHTML = "<p>Thank you for getting in touch. We will reply shortly.</p>";
