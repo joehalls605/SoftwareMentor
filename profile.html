@@ -27,7 +27,7 @@
                 </div>
                
                 <div id="developerContact">
-                    <button class="contactButton">Book <span id="developerNamePlaceholder"></span></button>
+                    <button class="contactButton" onclick="bookDeveloperAndRedirect()">Book <span id="developerNamePlaceholder"></span></button>
                 </div>
                
             </div>
@@ -102,6 +102,16 @@
         // Retrieve and display projects
         const projects = getURLParameter('projects');
       
+        function bookDeveloperAndRedirect() {
+            const developerName = getURLParameter('developer');
+            console.log('Developer Name:', developerName); // Check developerName in console for debugging
+
+            if (developerName) {
+                window.location.href = './enrollment.html?developer=' + encodeURIComponent(developerName);
+            } else {
+                console.error('Developer name not found in URL.');
+            }
+        }
     </script>
     
 </body>

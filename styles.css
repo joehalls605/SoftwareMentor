@@ -7,7 +7,6 @@ body {
     flex-direction: column;
 }
 
-
 #header {
     display: flex;
     align-items: flex-start;
@@ -23,8 +22,8 @@ body {
 }
 
 #header a {
-    text-decoration: none; 
-    color: black; 
+    text-decoration: none;
+    color: black;
 }
 
 #footer {
@@ -42,8 +41,8 @@ body {
 
 h2 {
     margin: 0;
-    text-decoration: none; 
-    color: black; 
+    text-decoration: none;
+    color: black;
 }
 
 ul {
@@ -104,11 +103,17 @@ button {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.button-basic {
-    color: black;
+.button-enroll {
+    background-color: #4859FF;
+    color: white;
     padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    background-color: transparent;
+    transition: background-color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    font-size: large;
 }
 
 #filterButton {
@@ -121,7 +126,7 @@ button {
     font-size: large;
 }
 
-.filter-button-wrapper img{
+.filter-button-wrapper img {
     width: 15px;
 }
 
@@ -130,7 +135,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .developer {
@@ -146,13 +151,12 @@ button {
 
 .developer:hover {
     border-color: #d8d8d8;
-    background-color: #f0f0f0;
 }
 
 .developer img {
-    width: 300px;  /* New size */
-    height: 300px; /* New size */
-    object-fit: contain; /* Ensure the image is not distorted */
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
 }
 
 .developer .programmingLanguage {
@@ -181,7 +185,6 @@ button {
     text-align: center;
 }
 
-
 .programmingLanguage p {
     margin: 0;
     margin-right: 10px;
@@ -192,11 +195,9 @@ button {
     height: 46px;
 }
 
-#developerLanguageImage{
-    
-}
+#developerLanguageImage {}
 
-#developerProfile #developerLanguageImage img{
+#developerProfile #developerLanguageImage img {
     width: 97px;
     height: 98px;
 }
@@ -223,11 +224,11 @@ button {
     }
 }
 
-label.filterFormTitle{
-    text-align: left; 
+label.filterFormTitle {
+    text-align: left;
 }
 
-label{
+label {
     text-align: left;
 }
 
@@ -246,7 +247,7 @@ label{
     text-align: left;
 }
 
-.column-intro{
+.column-intro {
     display: flex;
     flex-direction: column;
 }
@@ -257,10 +258,17 @@ label{
     text-align: left;
 }
 
-.content-row{
+.content-row {
     margin-left: 95px;
+    margin-bottom: 10;
 }
-.content-row p{
+
+#footer-content {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.content-row p {
     margin-top: 20px;
 }
 
@@ -268,16 +276,15 @@ label{
     display: flex;
     flex-direction: row;
     text-align: left;
-   
 }
 
 .vertical-list li {
     display: block;
     margin-left: 0;
-    margin-bottom: 10px; /* Optional: Add spacing between items */
+    margin-bottom: 10px;
 }
 
-.headerText{
+.headerText {
     margin-bottom: 10px;
 }
 
@@ -422,7 +429,6 @@ p {
     padding-top: 80px;
 }
 
-
 .submission-row {
     display: flex;
     flex-direction: column;
@@ -448,12 +454,59 @@ p {
     padding: 20px;
 }
 
-.grid-item {
-    background-color: #E8E8E8;
+.services-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 20px;
-    text-align: center;
 }
 
-.services-row{
+.services-grid-two ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item {
+    background-color: #E8E8E8;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-item li {
+    margin: 10px;
+}
+
+.services-row {
     margin-left: 30px;
+}
+
+.services-grid ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-grid li {
+    margin-bottom: 10px;
+}
+
+.services-body {
+    padding: 30px;
+    padding-top: 80px;
+}
+
+.enroll-section {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.services-products{
+    padding: 30px;
+    padding-top: 30px;
 }
