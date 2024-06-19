@@ -15,73 +15,44 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <div class="contact-row">
-        <div class="contact-left-column">
-            <form action="#" method="post" id="ContactForm">
-                <h2 class="form-header">How can we help you?</h3>
-                <br>
-                <p>We're here to help with any questions or concerns regarding our service. Please expect a reply within 2 days.</p>
-                <br>
-                <label for="name">Name</label>
-                <input type="text" id="currentSkills" name="currentSkills" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="topic">Topic</label>
-                <select id="topic" name="topic">
-                    <option value="account">Essential Career Development Package</option>
-                    <option value="account">Advanced Career Development Package</option>
-                    <option value="account">Account</option>
-                    <option value="buying">Buying on Software Mentor</option>
-                    <option value="payments">Payments</option>
-                    <option value="order">Order management</option>
-                    <option value="review">Instructor Review</option>
-                    <option value="terms">Terms & Conditions</option>
-                    <option value="other">Other</option>
-                </select>
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <div id="notice"></div>
-                <button id="submit" type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="contact-right-column">
+    <div id="contact-row">
+        <div class="contact-column">
             <div id="contact-body">
-                <img src="./images/contact.png" alt="Contact support">
+                <h2>Contact Form</h2>
+                <br>
+                <form action="#" method="post" id="ContactForm">
+                    <p>We're here to help with any questions or concerns regarding our service. Please expect a reply within 2 days.</p>
+                <br>
+                    <label for="name">Name</label>
+                    <input type="text" id="currentSkills" name="currentSkills" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="account">Essential Career Development Package</option>
+                        <option value="account">Advanced Career Development Package</option>
+                        <option value="account">Account</option>
+                        <option value="buying">Buying on Software Mentor</option>
+                        <option value="payments">Payments</option>
+                        <option value="order">Order management</option>
+                        <option value="review">Instructor Review</option>
+                        <option value="terms">Terms & Conditions</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="about-column">
+            <div id="about-body">
+                <img src="./images/aboutUs.png" alt="About Us Image">
             </div>
         </div>
     </div>
-
     <div id="footer">
         <p>Software Mentor. All rights reserved</p>
     </div>
-    <script>
-        document.getElementById("ContactForm").addEventListener("submit", function(event){
-            event.preventDefault(); // prevent default submission
-
-            //gathering the data
-            const formData = new FormData(this);
-
-            //construct the query string form data
-            const queryString = new URLSearchParams(formData).toString();
-
-            window.location.href = "submission.html?" + queryString;
-
-            // Make GET request to test endpoint (replace with my actual endpoint)
-
-            fetch("https://example.com/test?" + queryString).then(
-                response => {
-                    if(!response.ok){
-                        throw new Error("Network response was not ok")
-                    }
-                    return response.json();
-                }).then(data => { // handle response data
-                    console.log(data)
-                    document.getElementById("notice").innerText = "Request sent sucessfully"
-                }).catch( error => {
-                    console.error("There was a problem with the fetch operation", error);
-                    document.getElementById("notice").innerText = "Error: Request failed";
-                })
-        });
-    </script>
 </body>
 </html>

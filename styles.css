@@ -71,14 +71,15 @@ li {
 
 form {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
+    text-align: left; /* Ensure text is aligned to the left */
 }
 
 input, select, textarea {
@@ -86,10 +87,6 @@ input, select, textarea {
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
-}
-
-.main-slogan {
-    text-align: left;
 }
 
 button {
@@ -140,17 +137,19 @@ button {
 
 .developer {
     width: 39%;
-    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden; /* this makes sure my content stays within rounded corners*/
     text-align: left;
     padding: 10px;
     margin: 15px;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .developer:hover {
-    border-color: #d8d8d8;
+    transform: scale(1.03); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .developer img {
@@ -193,13 +192,6 @@ button {
 .programmingLanguage img {
     width: 45px;
     height: 46px;
-}
-
-#developerLanguageImage {}
-
-#developerProfile #developerLanguageImage img {
-    width: 97px;
-    height: 98px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -380,13 +372,6 @@ p {
     margin: 0;
 }
 
-#ContactForm {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 50px;
-}
-
 #message {
     margin-top: 10px;
     width: 700px;
@@ -408,26 +393,22 @@ p {
     width: 50%;
 }
 
-.contact-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: 100px;
+.contact-column{
+    width: 50%;
 }
 
-.contact-right-column {
-    width: 500px;
-    margin-left: 20px;
-}
-
-.contact-left-column {
-    width: 550px;
-}
-
-#contact-body {
+#contact-body{
+    padding: 30px;
     padding-top: 80px;
 }
+
+#contact-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
 
 .submission-row {
     display: flex;
@@ -509,4 +490,42 @@ p {
 .services-products{
     padding: 30px;
     padding-top: 30px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.testimonial img {
+    width: 80px;
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    text-align: left;
+}
+
+#contact-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.contact-column {
+    width: 50%;
+}
+
+#contact-body {
+    padding: 30px;
+    padding-top: 80px;
 }

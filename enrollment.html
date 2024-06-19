@@ -20,7 +20,6 @@
             <form action="#" method="post" id="ContactForm" onsubmit="submitForm(event)">
                 <h2 class="developer-header">Book</h2>
                 <div class="developer-details">
-                    ADD DEVELOPER DETAILS HERE
                 </div>
                 <br>
                 <label for="name">Name</label>
@@ -35,7 +34,7 @@
         </div>
         <div class="contact-right-column">
             <div id="contact-body">
-                DEVELOPER IMAGE
+                <div id="developerImage"></div>
             </div>
         </div>
     </div>
@@ -44,22 +43,33 @@
     </div>
     <script>
         function getURLParameter(name) {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            return urlParams.get(name);
-        }
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(name);
+    }
 
-        const developerName = getURLParameter('developer');
-        const formHeaderElement = document.querySelector(".developer-header");
-        if (formHeaderElement) {
-            formHeaderElement.textContent += " " + developerName;
-        }
+    const developerName = getURLParameter('developer');
+    const developerBio = getURLParameter("bio");
+    const developerImage = decodeURIComponent(getURLParameter('image'));
+    const developerImageElementContainer = document.getElementById('developerImage');
+    const formHeaderElement = document.querySelector(".developer-header");
 
-        function submitForm(event) {
-            event.preventDefault();
-            const leftColumnElement = document.querySelector(".contact-left-column");
-            leftColumnElement.innerHTML = "<p>Thank you for getting in touch. We will reply shortly.</p>";
-        }
+    if (formHeaderElement) {
+        formHeaderElement.textContent += " " + developerName;
+    }
+
+    if (developerImageElementContainer && developerImage) {
+        const imgElement = document.createElement("img");
+        imgElement.src = developerImage;
+        imgElement.alt = "Developer image";
+        developerImageElementContainer.appendChild(imgElement);
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        const leftColumnElement = document.querySelector(".contact-left-column");
+        leftColumnElement.innerHTML = "<p>Thank you for getting in touch. We will reply shortly.</p>";
+    }
     </script>
 </body>
 </html>
