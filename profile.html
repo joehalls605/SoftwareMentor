@@ -27,6 +27,10 @@
                     <p></p>
                 </div>
                 <br>
+                <div id="developerPricePerHour">
+                    <p></p>
+                </div>
+                <br>
                 <div id="developerLanguageImage">
                     <img src="" alt="Developer Image Language">
                 </div>
@@ -57,17 +61,20 @@
         const developerBio = getURLParameter('bio');
         const developerImage = decodeURIComponent(getURLParameter('image'));
         const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
+        const developerPricePerHour = decodeURIComponent(getURLParameter('pricePerHour'));
 
         const developerNameElement = document.getElementById('developerName').querySelector('h2');
         const developerBioElement = document.getElementById('developerBio').querySelector('p');
         const developerImageElement = document.getElementById('developerImage').querySelector('img');
         const developerLanguageImageElement = document.getElementById('developerLanguageImage').querySelector('img');
+        const developerPricePerHourElement = document.getElementById("developerPricePerHour");
 
         if (developerNameElement && developerBioElement) {
             developerNameElement.textContent = developerName;
             developerBioElement.textContent = developerBio;
             developerImageElement.src = developerImage;
             developerLanguageImageElement.src = developerLanguageImage;
+            developerPricePerHourElement.textContent = "£" + developerPricePerHour + "/h";
         }
 
         const developerNamePlaceholder = document.getElementById("developerNamePlaceholder");
