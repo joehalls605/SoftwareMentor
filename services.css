@@ -1,0 +1,42 @@
+
+.services-grid ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-grid li {
+    margin-bottom: 10px;
+}
+
+.services-body {
+    padding-top: 80px;
+}
+
+.services-products {
+    padding: 30px;
+    padding-top: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services-grid-two ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-header-text{
+    width: 80%;
+}

@@ -1,3 +1,4 @@
+/*Styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -72,14 +73,14 @@ li {
 form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start;
     justify-content: center;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
-    text-align: left; /* Ensure text is aligned to the left */
+    text-align: left;
 }
 
 input, select, textarea {
@@ -164,13 +165,14 @@ button {
 .developer {
     width: 39%;
     border-radius: 10px;
-    overflow: hidden; /* this makes sure my content stays within rounded corners*/
+    overflow: hidden;
     text-align: left;
     padding: 10px;
     margin: 15px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .developer:hover {
@@ -278,7 +280,7 @@ label {
 
 .content-row {
     margin-left: 95px;
-    margin-bottom: 10;
+    margin-bottom: 10px;
 }
 
 #footer-content {
@@ -419,11 +421,11 @@ p {
     width: 50%;
 }
 
-.contact-column{
+.contact-column {
     width: 50%;
 }
 
-#contact-body{
+#contact-body {
     padding: 30px;
     padding-top: 80px;
 }
@@ -434,7 +436,6 @@ p {
     margin-left: 30px;
     margin-top: 30px;
 }
-
 
 .submission-row {
     display: flex;
@@ -513,7 +514,7 @@ p {
     padding-top: 20px;
 }
 
-.services-products{
+.services-products {
     padding: 30px;
     padding-top: 30px;
 }
@@ -554,4 +555,24 @@ form input, form select, form textarea {
 #contact-body {
     padding: 30px;
     padding-top: 80px;
+}
+
+#ContactForm {
+    margin: 30px;
+}
+
+.enrollment-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.enrollment-column{
+ width: 50%;
+}
+
+#developerImage img {
+    max-width: 100%;
+    height: auto;
+    margin: 50px;
+    border-radius: 50px
 }
