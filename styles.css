@@ -114,6 +114,18 @@ button {
     font-size: large;
 }
 
+.button-enroll:hover {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    font-size: large;
+}
+
 #filterButton {
     margin-top: 30px;
     margin-left: 40px;
@@ -405,22 +417,6 @@ p {
     width: 700px;
 }
 
-#about-body {
-    padding: 30px;
-    padding-top: 80px;
-}
-
-#about-row {
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-.about-column {
-    width: 50%;
-}
-
 .contact-column {
     width: 50%;
 }
@@ -481,7 +477,25 @@ p {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.grid-item:hover{
+    background-color: #E8E8E8;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transform: scale(1.03); 
 }
 
 .grid-item li {
@@ -541,25 +555,6 @@ form input, form select, form textarea {
     text-align: left;
 }
 
-#contact-row {
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    margin-top: 30px;
-}
-
-.contact-column {
-    width: 50%;
-}
-
-#contact-body {
-    padding: 30px;
-    padding-top: 80px;
-}
-
-#ContactForm {
-    margin: 30px;
-}
 
 .enrollment-row {
     display: flex;
