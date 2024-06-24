@@ -34,14 +34,17 @@
                 <div id="developerLanguageImage">
                     <img src="" alt="Developer Image Language">
                 </div>
-                <br>
-                <div id="developerContact">
-                    <button class="contactButton" onclick="bookDeveloperAndRedirect()">Book <span id="developerNamePlaceholder"></span></button>
+                <div id="developerReviews">
                 </div>
+                <br>
+             
             </div>
             <div class="profile-column">
                 <div id="developerImage">
                     <img src="" alt="Developer Image">
+                </div>
+                <div id="developerContact">
+                    <button class="contactButton" onclick="bookDeveloperAndRedirect()">Contact <span id="developerNamePlaceholder"></span></button>
                 </div>
             </div>
         </div>
@@ -62,20 +65,40 @@
         const developerImage = decodeURIComponent(getURLParameter('image'));
         const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
         const developerPricePerHour = decodeURIComponent(getURLParameter('pricePerHour'));
+        const developerReviews = decodeURIComponent(getURLParameter("reviews"));
 
         const developerNameElement = document.getElementById('developerName').querySelector('h2');
         const developerBioElement = document.getElementById('developerBio').querySelector('p');
         const developerImageElement = document.getElementById('developerImage').querySelector('img');
         const developerLanguageImageElement = document.getElementById('developerLanguageImage').querySelector('img');
         const developerPricePerHourElement = document.getElementById("developerPricePerHour");
+        const developerReviewsElement = document.getElementById("developerReviews");
 
         if (developerNameElement && developerBioElement) {
             developerNameElement.textContent = developerName;
             developerBioElement.textContent = developerBio;
             developerImageElement.src = developerImage;
             developerLanguageImageElement.src = developerLanguageImage;
-            developerPricePerHourElement.textContent = "£" + developerPricePerHour + "/h";
+            developerPricePerHourElement.textContent = "Price: £" + developerPricePerHour + "/h";
+
+            const parsedReviews = JSON.parse(developerReviews);
+
+            if (parsedReviews && parsedReviews.length > 0) {
+                const reviewsHTML = parsedReviews.map(review => `
+                    <div class="review">
+                        <p><strong>${review.reviewer}</strong> - Rating: ${review.rating}/5</p>
+                        <br>
+                        <p>${review.review}</p>
+                        <br>
+                    </div>
+                `).join("");
+                developerReviewsElement.innerHTML = `<br><h3>Reviews</h3>${reviewsHTML}`;
+            } else {
+                developerReviewsElement.innerHTML = "<p>No reviews available</p>";
+            }
         }
+
+       
 
         const developerNamePlaceholder = document.getElementById("developerNamePlaceholder");
         if (developerNamePlaceholder) {

@@ -64,6 +64,13 @@ button:hover {
 
 .contactButton {
     margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contactButton:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #developerLanguageImage img {
@@ -75,4 +82,8 @@ button:hover {
 #developerImage img{
     width: 250px;
     border-radius: 50px;
+}
+
+#developerContact{
+margin-left: 95px;
 }

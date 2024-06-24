@@ -1,0 +1,30 @@
+
+.enrollment-row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    border: 2px solid #f0f0f0;
+    padding: 20px;
+    margin: 30px;
+
+}
+
+.enrollment-column{
+ width: 50%;
+}
+
+.enrollmentButton {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.enrollmentButton:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* .developerSection{
+    margin-left: 30px;
+    background-color: antiquewhite;
+} */

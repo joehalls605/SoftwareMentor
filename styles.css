@@ -34,6 +34,7 @@ body {
     justify-content: center;
     background-color: #F3F3F3;
     padding: 30px;
+    margin-top: auto; 
 }
 
 #footer p:hover {
@@ -99,6 +100,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: medium;
 }
 
 .button-enroll {
@@ -139,7 +141,7 @@ button {
     border: none; 
     background-color: #4859FF; 
     color: white; 
-    border-radius: 4px; 
+    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -417,21 +419,7 @@ p {
     width: 700px;
 }
 
-.contact-column {
-    width: 50%;
-}
 
-#contact-body {
-    padding: 30px;
-    padding-top: 80px;
-}
-
-#contact-row {
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    margin-top: 30px;
-}
 
 .submission-row {
     display: flex;
@@ -555,15 +543,6 @@ form input, form select, form textarea {
     text-align: left;
 }
 
-
-.enrollment-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.enrollment-column{
- width: 50%;
-}
 
 #developerImage img {
     max-width: 100%;

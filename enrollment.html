@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Mentor</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enrollment.css">
 </head>
 <body>
     <div id="header">
@@ -18,22 +19,30 @@
     <div class="enrollment-row">
         <div class="enrollment-column">
             <form action="#" method="post" id="ContactForm" onsubmit="submitForm(event)">
-                <h2 class="developer-header">Book</h2>
-                <div class="developer-details"></div>
+                <h2 class="developer-header">Your Details</h2>
                 <br>
                 <label for="name">Name</label>
                 <input type="text" id="currentSkills" name="currentSkills" required>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-                <label for="message">Additional Notes</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <h3>Tell us about you</h3>
+                <input type="email" id="email" name="email" required>
+                <label for="currentSkills">Your Current Coding Skill Level</label>
+                <textarea id="currentSkills" name="currentSkills" rows="4" required></textarea>
+                <label for="learningStyle">Learning Style</label>
+                <textarea id="learningStyle" name="learningStyle" rows="4" required></textarea>
+                <label for="longTermGoals">Your Long Term Goals</label>
+                <textarea id="longTermGoals" name="longTermGoals" rows="4" required></textarea>
                 <div id="notice"></div>
-                <button id="submit" type="submit">Submit</button>
+                <button class="enrollmentButton" id="submit" type="submit">Submit</button>
             </form>
         </div>
         <div class="enrollment-column">
-            <div id="developerImage"></div>
-          <img src="">
+            <div class="developerSection">
+                <div id="developerImage"></div>
+                <p>Let's work together!</p>
+                <img src="">
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -51,10 +60,6 @@
         const developerImage = decodeURIComponent(getURLParameter('image'));
         const developerImageElementContainer = document.getElementById('developerImage');
         const formHeaderElement = document.querySelector(".developer-header");
-
-        if (formHeaderElement) {
-            formHeaderElement.textContent += " " + developerName;
-        }
 
         if (developerImageElementContainer && developerImage) {
             const imgElement = document.createElement("img");
