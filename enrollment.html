@@ -40,8 +40,7 @@
         <div class="enrollment-column">
             <div class="developerSection">
                 <div id="developerImage"></div>
-                <p>Let's work together!</p>
-                <img src="">
+                <p id="randomTextParagraph"></p>
             </div>
         </div>
     </div>
@@ -73,6 +72,25 @@
             const leftColumnElement = document.querySelector(".enrollment-left-column");
             leftColumnElement.innerHTML = "<p>Thank you for getting in touch. We will reply shortly.</p>";
         }
+
+        function randomText(){
+            const text = [
+            "Get in touch! 💡",
+            "Let's work together! 🤝",
+            "I'm ready to help! 🤝",
+            ];
+
+            const randomIndex = Math.floor(Math.random() * text.length);
+            return text[randomIndex];
+        }
+
+        function injectRandomText(){
+            const randomTextParagraph = document.getElementById("randomTextParagraph");
+            if(randomTextParagraph){
+                randomTextParagraph.textContent = randomText();
+            }
+        }
+        injectRandomText();
     </script>
 </body>
 </html>

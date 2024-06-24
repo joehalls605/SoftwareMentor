@@ -459,32 +459,7 @@ p {
     flex-direction: column;
 }
 
-.grid-item {
-    background-color: #E8E8E8;
-    padding: 40px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
 
-.grid-item:hover{
-    background-color: #E8E8E8;
-    padding: 40px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transform: scale(1.03); 
-}
 
 .grid-item li {
     margin: 10px;

@@ -13,7 +13,6 @@ const developersData = [
     reviews: [
       {
         reviewer: "John Doe",
-        rating: 5,
         review: "Alice is a fantastic mentor. Her knowledge of JavaScript and modern frameworks is exceptional. She helped me understand complex concepts with ease."
       },
       {
@@ -37,12 +36,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Michael Brown",
-        rating: 5,
         review: "James has deep knowledge in Python and data science. His mentoring sessions were extremely helpful for my career development."
       },
       {
         reviewer: "Emily Davis",
-        rating: 4,
         review: "James is a great mentor. His expertise in machine learning helped me complete my project successfully."
       }
     ]
@@ -61,12 +58,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Sarah Johnson",
-        rating: 5,
         review: "Charlie is an excellent Java mentor. His experience with enterprise applications is evident in his teaching."
       },
       {
         reviewer: "David Lee",
-        rating: 4,
         review: "Charlie's mentoring sessions were very informative. He helped me improve my understanding of Java EE and Spring Framework."
       }
     ]
@@ -85,12 +80,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Linda Williams",
-        rating: 5,
         review: "Christina is a fantastic mentor for Ruby on Rails. She helped me build a scalable web application from scratch."
       },
       {
         reviewer: "Robert Martinez",
-        rating: 4,
         review: "Christina's mentoring sessions were very helpful. She provided valuable insights into Ruby and front-end technologies."
       }
     ]
@@ -109,12 +102,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Anna Wilson",
-        rating: 5,
         review: "Xavi provided excellent resume advice. His feedback helped me land my current job."
       },
       {
         reviewer: "Mark Thomas",
-        rating: 4,
         review: "Xavi's insights into the .NET ecosystem and resume tips were invaluable for my job search."
       }
     ]
@@ -133,12 +124,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Sophia White",
-        rating: 5,
         review: "Frank's interview coaching was extremely helpful. He provided great tips and mock interview sessions that boosted my confidence."
       },
       {
         reviewer: "William Moore",
-        rating: 4,
         review: "Frank's interview coaching helped me prepare effectively for my job interviews. His feedback was very constructive."
       }
     ]
@@ -157,12 +146,10 @@ const developersData = [
     reviews: [
       {
         reviewer: "Jessica Green",
-        rating: 5,
         review: "Henrich's mentoring sessions were very insightful. He has a deep understanding of Ruby and mobile app development."
       },
       {
         reviewer: "Chris Taylor",
-        rating: 4,
         review: "Henrich provided valuable guidance on my Ruby projects. His feedback helped me improve my coding skills significantly."
       }
     ]

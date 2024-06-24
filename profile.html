@@ -44,7 +44,7 @@
                     <img src="" alt="Developer Image">
                 </div>
                 <div id="developerContact">
-                    <button class="contactButton" onclick="bookDeveloperAndRedirect()">Contact <span id="developerNamePlaceholder"></span></button>
+                    <button class="contactButton" onclick="bookDeveloperAndRedirect()">Contact</button>
                 </div>
             </div>
         </div>
@@ -86,9 +86,9 @@
             if (parsedReviews && parsedReviews.length > 0) {
                 const reviewsHTML = parsedReviews.map(review => `
                     <div class="review">
-                        <p><strong>${review.reviewer}</strong> - Rating: ${review.rating}/5</p>
+                        <p><strong>${review.reviewer}</strong></p>
                         <br>
-                        <p>${review.review}</p>
+                        <p>"${review.review}"</p>
                         <br>
                     </div>
                 `).join("");

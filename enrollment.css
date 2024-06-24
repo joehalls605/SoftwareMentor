@@ -17,6 +17,7 @@
     margin-top: 10px;
     border-radius: 10px;
     width: 150px;
+    font-size: large;
 }
 
 .enrollmentButton:hover{
@@ -24,7 +25,15 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* .developerSection{
-    margin-left: 30px;
-    background-color: antiquewhite;
-} */
+
+.developerSection p{
+    margin-left: 80px;
+    font-size: large;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
