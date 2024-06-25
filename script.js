@@ -160,6 +160,7 @@ const developersData = [
 
 const developersWidget = document.getElementById("developers");
 
+
 function renderDevelopers(developers) {
     developersWidget.innerHTML = "";
     developers.forEach(developer => {
@@ -210,28 +211,26 @@ renderDevelopers(developersData);
 
 const filterButton = document.getElementById("filterButton");
 filterButton.addEventListener("click", function(event) {
-    filterDevelopers(event); // Pass the event object
+    filterDevelopers(event);
 });
 
 function filterDevelopers(event) {
-    event.preventDefault();
-    const mentorshipType = document.getElementById("mentorshipType").value;
-    const selectedLanguage = document.getElementById("programmingLanguage").value;
-    const budgetValue = parseInt(document.getElementById("budget_input").value);
-    const deliveryTimeValue = document.getElementById("deliveryTime").value;
-    
+  event.preventDefault(); // Prevent form submission
+  const mentorshipType = document.getElementById("mentorshipType").value;
+  const selectedLanguage = document.getElementById("programmingLanguage").value;
+  const budgetValue = parseInt(document.getElementById("hourlyBudget").value);
+  const deliveryTimeValue = document.getElementById("deliveryTime").value;
+  
+  const filteredDevelopers = developersData.filter(developer => {
+      return (
+          (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
+          (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage || selectedLanguage === "Any") &&
+          (isNaN(budgetValue) || developer.pricePerHour <= budgetValue) &&
+          (deliveryTimeValue === 'Any' || developer.deliveryTime <= parseInt(deliveryTimeValue))
+      );
+  });
 
-    const filteredDevelopers = developersData.filter(developer => {
-        return (
-            (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
-            (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage || selectedLanguage === "Any") &&
-            (isNaN(budgetValue) || developer.pricePerHour <= budgetValue) &&
-            (deliveryTimeValue === 'Any' || developer.deliveryTime <= parseInt(deliveryTimeValue))
-        );
-    });
-
-    console.log(filteredDevelopers);
-    renderDevelopers(filteredDevelopers);
-    document.getElementById('developers').scrollIntoView({ behavior: 'smooth' });
-
+  console.log(filteredDevelopers);
+  renderDevelopers(filteredDevelopers);
+  document.getElementById('developers').scrollIntoView({ behavior: 'smooth' });
 }
