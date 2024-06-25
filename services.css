@@ -1,4 +1,3 @@
-
 .services-grid ul {
     list-style-type: none;
     padding: 0;
@@ -22,6 +21,14 @@
     padding-top: 30px;
 }
 
+@media (max-width: 768px) {
+    .services-products {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
 #body-header {
     background-color: #F3F3F3;
     padding-left: 50px;
@@ -40,11 +47,28 @@
     margin-bottom: 20px;
 }
 
+#body-section{
+    display: flex;
+    flex-direction: row;
+}
+
+#body-section img{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+}
+
+#body-section img {
+    width: 400px;
+    height: 300px;
+}
+
 .services-header-text {
-    width: 80%;
     font-size: 1.2em;
     line-height: 1.6;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+    padding-right: 20px;
 }
 
 @media (max-width: 768px) {
@@ -59,8 +83,28 @@
     }
     
     .services-header-text {
-        width: 100%;
         font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    #body-header {
+        padding: 30px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    #body-header h2 {
+        font-size: 2em;
+    }
+
+    .services-header-text {
+        padding: 50px;
+    }
+
+    #body-section {
+        flex-direction: column; 
+        align-items: center; 
     }
 }
 
@@ -76,13 +120,25 @@
     gap: 20px;
 }
 
+@media (max-width: 600px) {
+    .services-grid-two {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+}
+
 .services-grid-two ul {
     display: flex;
     flex-direction: column;
 }
 
-.services-header-text{
-    width: 80%;
+
+@media (max-width: 600px) {
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .grid-item {
@@ -97,12 +153,17 @@
     background-color: #FAFAFA;
     align-items: center;
     justify-content: center;
-    
 }
 
 .grid-item:hover{
     transform: scale(1.03); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@media (max-width: 600px) {
+    .grid-item {
+     margin: 0px;
+    }
 }
 
 .enroll-section {
@@ -111,7 +172,6 @@
     align-items: center;
     margin-top: 20px;
 }
-
 
 .button-enroll {
     background-color: #4859FF;
