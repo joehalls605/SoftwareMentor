@@ -20,23 +20,24 @@
         <div class="enrollment-column">
             <form action="#" method="post" id="ContactForm" onsubmit="submitForm(event)">
                 <h2 class="developer-header">Your Details</h2>
-                <br>
                 <label for="name">Name</label>
-                <input type="text" id="currentSkills" name="currentSkills" required>
+                <input type="text" id="name" name="name" required>
+                
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+                
                 <h3>Tell us about you</h3>
-                <input type="email" id="email" name="email" required>
                 <label for="currentSkills">Your Current Coding Skill Level</label>
                 <textarea id="currentSkills" name="currentSkills" rows="4" required></textarea>
+                
                 <label for="learningStyle">Learning Style</label>
                 <textarea id="learningStyle" name="learningStyle" rows="4" required></textarea>
+                
                 <label for="longTermGoals">Your Long Term Goals</label>
                 <textarea id="longTermGoals" name="longTermGoals" rows="4" required></textarea>
+                
                 <div id="notice"></div>
-                <br>
-                <p>When you're ready to submit. We'll support you with the rest.</p>
-                <br>
+                <p>We'll support you with the rest 👨🏾‍💻</p>
                 <button class="enrollmentButton" id="submit" type="submit">Submit</button>
             </form>
         </div>
@@ -48,7 +49,12 @@
         </div>
     </div>
     <div id="footer">
-        <p>Software Mentor. All rights reserved</p>
+        <p></p>
+        <ul class="footer-social-links">
+            <li><p>Software Mentor. All rights reserved</p></li>
+            <li><img src="./images//logos/twitter.png" alt="Twitter"></li>
+            <li><img src="./images//logos/instagram.png" alt="Instagram"></li>
+        </ul>
     </div>
     <script>
         function getURLParameter(name) {
@@ -72,7 +78,7 @@
 
         function submitForm(event) {
             event.preventDefault();
-            const leftColumnElement = document.querySelector(".enrollment-left-column");
+            const leftColumnElement = document.querySelector(".enrollment-column");
             leftColumnElement.innerHTML = "<p>Thank you for getting in touch. We will reply shortly.</p>";
         }
 

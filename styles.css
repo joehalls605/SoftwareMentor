@@ -37,8 +37,25 @@ body {
     margin-top: auto; 
 }
 
+.footer-social-links {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+}
+
+.footer-social-links li {
+    margin: 0 3px;
+}
+
 #footer p:hover {
     color: #3c4fcf;
+}
+
+#footer img{
+    width: 20px;
 }
 
 h2 {
@@ -253,7 +270,7 @@ label {
     margin-bottom: 40px;
     background-color: #F3F3F3;
     width: 100%;
-    padding: 50px 80px;
+    padding: 50px 60px;
     border-bottom: 1px solid #E8E8E8;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -491,6 +508,15 @@ p {
     align-items: center;
 }
 
+.testimonial {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial p {
+    margin: 0;
+}
+
 .testimonial img {
     width: 80px;
 }
@@ -510,4 +536,10 @@ form input, form select, form textarea {
     height: auto;
     margin: 50px;
     border-radius: 50px
+}
+
+.testimonials-row{
+    margin-left: 90px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }

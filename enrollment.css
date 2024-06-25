@@ -1,4 +1,3 @@
-
 .enrollment-row {
     display: flex;
     flex-direction: row;
@@ -6,11 +5,15 @@
     border: 2px solid #f0f0f0;
     padding: 40px;
     margin: 30px;
-
 }
 
-.enrollment-column{
- width: 50%;
+.enrollment-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.enrollment-column:last-child {
+    margin-right: 0;
 }
 
 .enrollmentButton {
@@ -20,20 +23,22 @@
     font-size: large;
 }
 
-.enrollmentButton:hover{
+.enrollmentButton:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.developerSection p{
+.developerSection p {
     margin-left: 80px;
     font-size: large;
     background-color: #f0f0f0;
     border-radius: 4px;
     padding: 15px;
-    width:300px;
+    width: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+textarea {
+    max-width: 100%;
+    resize: vertical; /* Allow only vertical resizing */
 }

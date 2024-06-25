@@ -235,14 +235,3 @@ function filterDevelopers(event) {
     document.getElementById('developers').scrollIntoView({ behavior: 'smooth' });
 
 }
-
-
-
-
-
-// FOOTER
-
-// const footerElement = document.getElementById("footer");
-// const date = new Date().getFullYear();
-// footerElement.append(date);
-// footerElement.append(" Software Mentor. All rights reserved");
