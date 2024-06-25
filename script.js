@@ -226,7 +226,7 @@ function filterDevelopers(event) {
             (mentorshipType === '' || developer.mentorshipType === mentorshipType) &&
             (selectedLanguage === '' || developer.programmingLanguage === selectedLanguage || selectedLanguage === "Any") &&
             (isNaN(budgetValue) || developer.pricePerHour <= budgetValue) &&
-            (deliveryTimeValue <= developer.deliveryTime || deliveryTimeValue === "Any")
+            (deliveryTimeValue === 'Any' || developer.deliveryTime <= parseInt(deliveryTimeValue))
         );
     });
 

@@ -256,6 +256,15 @@ label {
     padding: 50px 80px;
     border-bottom: 1px solid #E8E8E8;
     text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+}
+
+#input-container h2{
+    color: black;
+    font-size: 1.0em;
+    margin-bottom: 10px;
 }
 
 .column-intro {
