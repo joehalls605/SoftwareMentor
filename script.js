@@ -200,7 +200,8 @@ function showProfile(developer){
   const encodedLanguage = encodeURIComponent(developer.programmingLanguage);
   const encodedLanguageImage = encodeURIComponent(developer.programmingLanguageImage);
   const encodedReviews = encodeURIComponent(JSON.stringify(developer.reviews));
-  window.location.href = `profile.html?developer=${developer.name}&bio=${encodedBio}&language=${encodedLanguage}&image=${encodedImage}&languageImage=${encodedLanguageImage}&pricePerHour=${encodedPricePerHour}&reviews=${encodedReviews}`;
+  const encodedMentorshipType = encodeURIComponent(developer.mentorshipType);
+  window.location.href = `profile.html?developer=${developer.name}&bio=${encodedBio}&language=${encodedLanguage}&image=${encodedImage}&languageImage=${encodedLanguageImage}&pricePerHour=${encodedPricePerHour}&reviews=${encodedReviews}&mentorshipType=${encodedMentorshipType}`;
 }
 
 renderDevelopers(developersData);
@@ -231,6 +232,8 @@ function filterDevelopers(event) {
 
     console.log(filteredDevelopers);
     renderDevelopers(filteredDevelopers);
+    document.getElementById('developers').scrollIntoView({ behavior: 'smooth' });
+
 }
 
 

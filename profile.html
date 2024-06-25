@@ -43,6 +43,8 @@
                 <div id="developerImage">
                     <img src="" alt="Developer Image">
                 </div>
+                <div id="developerMentorshipType">
+                </div>
                 <div id="developerContact">
                     <button class="contactButton" onclick="bookDeveloperAndRedirect()">Contact</button>
                 </div>
@@ -66,6 +68,7 @@
         const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
         const developerPricePerHour = decodeURIComponent(getURLParameter('pricePerHour'));
         const developerReviews = decodeURIComponent(getURLParameter("reviews"));
+        const developerMentorshipType = decodeURIComponent("mentorshipType");
 
         const developerNameElement = document.getElementById('developerName').querySelector('h2');
         const developerBioElement = document.getElementById('developerBio').querySelector('p');
@@ -73,6 +76,7 @@
         const developerLanguageImageElement = document.getElementById('developerLanguageImage').querySelector('img');
         const developerPricePerHourElement = document.getElementById("developerPricePerHour");
         const developerReviewsElement = document.getElementById("developerReviews");
+        const developerMentorshipTypeElement = document.getElementById("developerMentorshipType");
 
         if (developerNameElement && developerBioElement) {
             developerNameElement.textContent = developerName;
@@ -80,6 +84,7 @@
             developerImageElement.src = developerImage;
             developerLanguageImageElement.src = developerLanguageImage;
             developerPricePerHourElement.textContent = "Price: £" + developerPricePerHour + "/h";
+            developerMentorshipType.textContent = developerMentorshipType;
 
             const parsedReviews = JSON.parse(developerReviews);
 
