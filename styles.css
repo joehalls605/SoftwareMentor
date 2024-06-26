@@ -542,9 +542,13 @@ p {
 }
 
 .services-body {
-    padding: 30px;
-    padding-top: 80px;
+    padding-top: 80px; 
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
+
 
 .enroll-section {
     margin-top: auto;
@@ -572,6 +576,9 @@ p {
 
     .testimonial {
         margin-bottom: 20px;
+    }
+
+    .services-products{
     }
 
     @media only screen and (max-width: 600px) {
@@ -616,6 +623,7 @@ form input, form select, form textarea {
 }
 
 .testimonials-row{
+    margin-left: 20px;
 }
 
 

@@ -14,3 +14,32 @@
  #contact-body {
     padding: 30px;
 }
+
+
+@media (max-width: 600px) {
+    h2{
+        font-size: 30px;
+    }
+
+    #contact-row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-body{
+        width: 100%;
+        margin:0px;
+        padding: 0px;
+    }
+    form{
+        width: 300px;
+        
+    }
+    #message{
+        width: 300px;
+    }
+    img{
+        width: 300px;
+        margin-bottom: 40px;
+    }
+}

@@ -15,4 +15,26 @@
     padding: 30px;
 }
 
+@media (max-width: 768px) {
+    #about-row{
+        display: flex;
+        flex-direction: column;
+    }
+    #about-column{
+        width: 100%;
+        padding: 0px;
+    }
+    #about-body{
+        width: 100%;
+        padding: 0px;
+        margin-left: 40px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    img{
+        width: 100%;
+    }
+    
+}
 

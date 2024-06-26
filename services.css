@@ -26,6 +26,11 @@
         display: flex;
         flex-direction: column;
     }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
     
 }
 
@@ -44,7 +49,6 @@
 #body-header h2 {
     color: black;
     font-size: 2.0em;
-    margin-bottom: 20px;
 }
 
 #body-section{
@@ -79,7 +83,6 @@
     }
     
     #body-header h2 {
-        font-size: 2em;
     }
     
     .services-header-text {
@@ -94,12 +97,8 @@
         padding-bottom: 30px;
     }
 
-    #body-header h2 {
-        font-size: 2em;
-    }
-
     .services-header-text {
-        padding: 50px;
+        padding: 10px;
     }
 
     #body-section {
