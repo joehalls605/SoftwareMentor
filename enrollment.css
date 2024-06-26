@@ -42,3 +42,23 @@ textarea {
     max-width: 100%;
     resize: vertical; /* Allow only vertical resizing */
 }
+
+@media (max-width: 600px) {
+    .enrollment-row{
+        display: flex;
+        flex-direction: column;
+    }
+    img{
+        width: 300px;
+    }
+    #developerImage img {
+        width: 300px;
+        margin: 0px;
+        margin-top: 40px;
+    }
+    #randomTextParagraph{
+        margin: 0px;
+        margin-top: 20px;
+        width: 200px
+    }
+}

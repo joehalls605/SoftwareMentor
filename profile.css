@@ -1,3 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#header h2 {
+    display: inline-block;
+    margin: 0;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header ul li {
+    margin-left: 20px;
+}
+
+#header ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
 #developerProfile {
     background-color: white;
     border: 2px solid #f0f0f0;
@@ -5,7 +42,6 @@
     padding: 10px;
     margin: 15px;
     font-family: sans-serif;
-    height: 700px;
 }
 
 #developerName {
@@ -70,7 +106,7 @@ button:hover {
     font-size: large;
 }
 
-.contactButton:hover{
+.contactButton:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -78,14 +114,46 @@ button:hover {
 #developerLanguageImage img {
     width: 40px; 
     height: auto;
-    border: #3c4fcf;
 }
 
-#developerImage img{
+#developerImage img {
     width: 300px;
-    border-radius: 50px;
+    border-radius: 5px;
 }
 
-#developerContact{
-margin-left: 80px;
+#developerContact {
+    margin-left: 80px;
+}
+
+@media (max-width: 600px) {
+    .profile-row {
+        flex-direction: column;
+    }
+
+    #developerImage img {
+        width: 200px;
+    }
+
+    .profile-column {
+        width: 100%;
+    }
+}
+
+#footer {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+}
+
+.footer-social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-links li {
+    margin-right: 10px;
 }

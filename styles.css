@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -14,10 +13,31 @@ body {
     width: 190px;
 }
 
+@media only screen and (max-width:600px){
+    #deliveryTime{
+       width: 300px;
+    }
+    .row-1 h2{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    #mentorshipType{
+       width: 300px;
+    }
+}
+
 #programmingLanguage{
     border-radius: 7px;
     font-size: 15px;
     width: 190px;
+}
+
+@media only screen and (max-width:600px){
+    #programmingLanguage{
+       width: 300px;
+    }
 }
 
 #mentorshipType{
@@ -25,10 +45,22 @@ body {
     font-size: 15px;
 }
 
+@media only screen and (max-width:600px){
+    #hourlyBudget{
+       width: 300px;
+    }
+}
+
 #hourlyBudget{
     border-radius: 7px;
     border-width: 1px;
     font-size: 15px;
+}
+
+@media only screen and (max-width:600px){
+    #hourlyBudget{
+       width: 300px;
+    }
 }
 
 .column label{
@@ -285,6 +317,7 @@ button {
     #filterForm label {
         text-align: left;
     }
+  
 }
 
 label.filterFormTitle {
@@ -331,16 +364,12 @@ label {
 }
 
 .content-row {
-    margin-left: 95px; 
-    margin-bottom: 10px;
-    max-width: 800px; 
+    margin-left: 20px; 
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 600px) {
-    .content-row {
-        margin-left: 20px; 
-        margin-right: 20px;
-    }
     .row-2 {
         flex-direction: column;
     }
@@ -560,9 +589,39 @@ p {
     padding-top: 30px;
 }
 
+.testimonials-row {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .testimonials-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial {
+        margin-bottom: 20px;
+    }
+
+}
+
+
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0;
     margin-top: 20px;
@@ -581,14 +640,7 @@ p {
     .services-products{
     }
 
-    @media only screen and (max-width: 600px) {
-        .testimonials-row {
-            margin-left: 1px;
-            margin-right: 1px;
-            margin-top: 1px;
-            margin-bottom: 1px;
-        }
-    }
+
     
 }
 
@@ -622,9 +674,7 @@ form input, form select, form textarea {
     border-radius: 50px
 }
 
-.testimonials-row{
-    margin-left: 20px;
-}
+
 
 
 @media only screen and (max-width: 600px) {

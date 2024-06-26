@@ -16,6 +16,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
+    
     <div id="developerProfile">
         <div class="profile-row">
             <div class="profile-column">
@@ -32,31 +33,28 @@
                 </div>
                 <br>
                 <div id="developerLanguageImage">
-                    <img src="" alt="Developer Image Language">
+                    <img src="" alt="Developer Language">
                 </div>
-                <div id="developerReviews">
-                </div>
+                <div id="developerReviews"></div>
                 <br>
-             
             </div>
             <div class="profile-column">
                 <div id="developerImage">
                     <img src="" alt="Developer Image">
-                </div>
-                <div id="developerMentorshipType">
                 </div>
                 <div id="developerContact">
                     <button class="contactButton" onclick="bookDeveloperAndRedirect()">Contact</button>
                 </div>
             </div>
         </div>
+        
     </div>
+    
     <div id="footer">
-        <p></p>
         <ul class="footer-social-links">
             <li><p>Software Mentor. All rights reserved</p></li>
-            <li><img src="./images//logos/twitter.png" alt="Twitter"></li>
-            <li><img src="./images//logos/instagram.png" alt="Instagram"></li>
+            <li><img src="./images/logos/twitter.png" alt="Twitter"></li>
+            <li><img src="./images/logos/instagram.png" alt="Instagram"></li>
         </ul>
     </div>
 
@@ -73,7 +71,7 @@
         const developerLanguageImage = decodeURIComponent(getURLParameter('languageImage'));
         const developerPricePerHour = decodeURIComponent(getURLParameter('pricePerHour'));
         const developerReviews = decodeURIComponent(getURLParameter("reviews"));
-        const developerMentorshipType = decodeURIComponent("mentorshipType");
+        const developerMentorshipType = decodeURIComponent(getURLParameter("mentorshipType"));
 
         const developerNameElement = document.getElementById('developerName').querySelector('h2');
         const developerBioElement = document.getElementById('developerBio').querySelector('p');
@@ -89,7 +87,7 @@
             developerImageElement.src = developerImage;
             developerLanguageImageElement.src = developerLanguageImage;
             developerPricePerHourElement.textContent = "Price: £" + developerPricePerHour + "/h";
-            developerMentorshipType.textContent = developerMentorshipType;
+            developerMentorshipTypeElement.textContent = developerMentorshipType;
 
             const parsedReviews = JSON.parse(developerReviews);
 
@@ -106,13 +104,6 @@
             } else {
                 developerReviewsElement.innerHTML = "<p>No reviews available</p>";
             }
-        }
-
-       
-
-        const developerNamePlaceholder = document.getElementById("developerNamePlaceholder");
-        if (developerNamePlaceholder) {
-            developerNamePlaceholder.textContent = developerName;
         }
 
         function bookDeveloperAndRedirect() {
