@@ -1,47 +1,130 @@
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+/* Flex container for the page */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
-#about-row{
+/* Ensure content takes remaining space */
+#content {
+    flex: 1;
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* About content styles */
+#about-row {
     display: flex;
     flex-direction: row;
     margin-left: 30px;
 }
 
-.about-column{
+.about-column {
     width: 100%;
     margin-top: 60px;
 }
 
-#about-body{
+#about-body {
     padding: 30px;
+    width: 85%;
 }
 
+/* Footer styles */
+#footer {
+    background-color: #F3F3F3;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.footer-social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-links li {
+    margin: 0 10px;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-    #about-row{
-        display: flex;
+    #about-row {
         flex-direction: column;
     }
-    .about-column{
+    .about-column {
         width: 90%;
         margin-bottom: 30px;
     }
-    #about-body{
+    #about-body {
         width: 100%;
         padding: 0px;
-        margin-left: 40px;
-    }
-    #about-body{
         margin-left: 0px;
     }
-    h2{
+    h2 {
         font-size: 30px;
     }
-    img{
+    img {
         width: 100%;
     }
-    #about-row{
-        display: flex;
-        flex-direction: column;
-    }
-    
 }
 
+@media only screen and (max-width: 600px) {
+    .nav-links {
+        font-size: 12px;
+    }
+    #header ul {
+        margin-right: 0px;
+        margin: 0px;
+    }
+    h2 {
+        font-size: medium;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #footer-content {
+        width: 100%;
+    }
+    .content-row {
+        margin: 0;
+        padding: 20px;
+    }
+    .footer-social-links ul li {
+        justify-content: center;
+        display: flex;
+    }
+}

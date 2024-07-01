@@ -8,60 +8,48 @@
 </head>
 <body>
     <!-- Header Section -->
-    <div id="header">
-        <!-- Logo and Navigation Links -->
+    <header id="header">
         <a href="index.html"><h2>Software Mentor</h2></a>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>   
-    </div>
-
- 
+        <nav>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Input Form Section -->
-
     <div id="input-container">
         <div class="row-1">
             <div id="main-slogan">
                 <h2>Accelerate your software journey with tailored mentorship</h2>
             </div>
-          </div>
+        </div>
         <div class="row-2">
             <div class="column">
-                <div>
-                    <ul class="vertical-list">
-                        <li>✅ Verified experts</li>
-                        <li>🏆 Proven Track Record</li>
-                        <li>🎓 Personalised Learning</li>
-                        <li>💂🏼 United Kingdom Based</li>
-                        <li>💻 Hands-on Coding Support</li>
-                    </ul>
-                </div>
+                <ul class="vertical-list">
+                    <li>✅ Verified experts</li>
+                    <li>🏆 Proven Track Record</li>
+                    <li>🎓 Personalised Learning</li>
+                    <li>💂🏼 United Kingdom Based</li>
+                    <li>💻 Hands-on Coding Support</li>
+                </ul>
             </div>
             <div class="column">
-                <!-- Mentorship Type Label -->
                 <label class="filterFormTitle" for="mentorshipType">Mentorship Type</label>
-                <!-- Mentorship Type Selection Dropdown -->
                 <form id="filterForm">
                     <select id="mentorshipType">
                         <option value="Programming_development">Programming Development</option>
                         <option value="Interview_coaching">Interview Coaching</option>
                         <option value="Resume_advice">Resume Advice</option>
                     </select>
-                    <!-- Budget Input Label -->
                 </form>
-                <label class="filterFormTitle" for="hourlyBudget" style="text-align: left;">Hourly Budget</label>
-                <!-- Budget Input Field -->
+                <label class="filterFormTitle" for="hourlyBudget">Hourly Budget</label>
                 <input type="number" id="hourlyBudget" placeholder="£20" value="" min="0">
             </div>
-    
-            <!-- Column Two: Delivery Time and Programming Language Selection -->
             <div class="column">
-                <!-- Delivery Time Label -->
                 <label class="filterFormTitle" for="deliveryTime">Delivery Time</label>
-                <!-- Delivery Time Selection Dropdown -->
                 <select id="deliveryTime">
                     <option value="Any">Any</option>
                     <option value="1">1 hr</option>
@@ -70,9 +58,7 @@
                     <option value="48">48 hrs</option>
                     <option value="null">Unlimited</option>
                 </select>
-                <!-- Programming Language Specialty Label -->
                 <label class="filterFormTitle" for="programmingLanguage">Coding Language</label>
-                <!-- Programming Language Specialty Selection Dropdown -->
                 <select id="programmingLanguage">
                     <option value="">Any</option>
                     <option value="Python">Python</option>
@@ -83,72 +69,59 @@
                     <option value="PHP">PHP</option>
                 </select>
             </div>
-                
-            <!-- Column Three: Filter Button -->
             <div class="column">
-                <form id="filterForm">
-                    <!-- Filter Button -->
-                    <div class="filter-button-wrapper">
-                        <button id="filterButton" onclick="filterDevelopers()">Find your Mentor
-                            <img src="./images/logos/arrow.png">
-                        </button>
-                    </div>
-                </form>
+                <div class="filter-button-wrapper">
+                    <button id="filterButton" onclick="filterDevelopers()">Find your Mentor
+                        <img src="./images/logos/arrow.png" alt="Arrow">
+                    </button>
+                </div>
             </div>
-            
         </div>
     </div>
 
     <div class="content-row">
         <h2>Expert Mentors for Your Success</h2>
-        <br>
-        <p></p>A team of committed software professionals is ready to assist you on your journey. We aim to foster the growth and success of aspiring developers by connecting them with experienced software engineering experts. Whether you are starting your programming journey, seeking advice to craft a standout resume, or polishing your interview skills to secure your dream job, we're here to support you every step of the way.</p>
+        <p>A team of committed software professionals is ready to assist you on your journey. We aim to foster the growth and success of aspiring developers by connecting them with experienced software engineering experts. Whether you are starting your programming journey, seeking advice to craft a standout resume, or polishing your interview skills to secure your dream job, we're here to support you every step of the way.</p>
     </div>
+
     <!-- Developers Section -->
     <div id="developers"></div>
 
+    <!-- Testimonials Section -->
     <div class="testimonials-row">
         <h2>We're beloved by our students 👩🏽‍💻</h2>
-        <br>
         <div class="testimonials-grid">
             <div class="testimonial">
                 <p>Brilliant experience! Software Mentor has been instrumental in advancing my career as a developer. Their personalised mentoring sessions helped me tackle complex coding challenges with confidence. I highly recommend their services to anyone looking to level up their skills in the tech industry! - Jack</p>
-                <br>
                 <img src="./images/logos/five-stars.png" alt="5 stars">
             </div>
             <div class="testimonial">
                 <p>I had the privilege of being mentored by Software Mentor, and it was a game-changer for me. Their deep knowledge and practical advice not only improved my coding abilities but also taught me valuable problem-solving techniques. I feel more prepared than ever to take on challenging projects in my role. - Lisa</p>
-                <br>
                 <img src="./images/logos/five-stars.png" alt="5 stars">
             </div>
             <div class="testimonial">
                 <p>Choosing Software Mentor was the best decision I made for my professional growth. Their mentorship is tailored to your specific needs, whether you’re a beginner or looking to specialise in a particular tech stack. Thanks to them, I gained the skills and confidence to land my dream job as a software engineer. - Jeremiah</p>
-                <br>
                 <img src="./images/logos/five-stars.png" alt="5 stars">
             </div>
         </div>
     </div>
+
     <!-- Footer Section -->
-     
     <div id="footer-content">
         <div class="content-row">
             <h2>Still haven't found what you need?</h2>
             <p><a href="./contact.html">Reach out to us.</a> If we can't assist you directly, we can connect you with our extensive network of technical experts.</p>
-            <br>
         </div>
     </div>
-      
-    <div id="footer">
-        <p></p>
+
+    <footer id="footer">
         <ul class="footer-social-links">
             <li><p>Software Mentor. All rights reserved</p></li>
-            <li><img src="./images//logos/twitter.png" alt="Twitter"></li>
-            <li><img src="./images//logos/instagram.png" alt="Instagram"></li>
+            <li><img src="./images/logos/twitter.png" alt="Twitter"></li>
+            <li><img src="./images/logos/instagram.png" alt="Instagram"></li>
         </ul>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>

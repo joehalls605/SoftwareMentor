@@ -197,3 +197,30 @@
     width: 150px;
     font-size: large;
 }
+
+@media only screen and (max-width: 600px) {
+     #header ul {
+         margin-right: 0px;
+         margin: 0px;
+     }
+     h2{
+         font-size: medium;
+     }
+     .nav-links {
+        margin: 0; 
+        padding: 0; 
+        display: flex;
+        justify-content: space-around; 
+    }
+    
+    .nav-links li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        padding: 5px 10px;
+    }
+ }
+ 

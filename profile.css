@@ -22,6 +22,7 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #header ul li {
@@ -138,6 +139,9 @@ button:hover {
     .profile-column {
         width: 100%;
     }
+    .footer-social-links{
+        font-size: 12px;
+    }
 }
 
 #footer {
@@ -158,3 +162,5 @@ button:hover {
 .footer-social-links li {
     margin-right: 10px;
 }
+
+
