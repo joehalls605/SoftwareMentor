@@ -266,6 +266,13 @@ button {
     object-fit: contain;
 }
 
+#contact-body img{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
 .developer .programmingLanguage {
     display: inline-block;
     align-items: center;
@@ -515,9 +522,8 @@ p {
 
 #message {
     margin-top: 10px;
-    width: 700px;
+    width: 100%;
 }
-
 
 
 .submission-row {
@@ -532,10 +538,6 @@ p {
 .submission-column {
     width: 500px;
     margin-bottom: 40px;
-}
-
-#message {
-    width: 450px;
 }
 
 .services-grid {
@@ -746,3 +748,4 @@ form input, form select, form textarea {
         font-size: medium;
     }
 }
+
