@@ -1,15 +1,11 @@
-.about-column{
+.contact-column{
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 35px;
 }
 
-.about-column img{
-    width: 100%;
-}
-
-.about-row{
+.contact-row{
     display: flex;
     flex-direction: row;
     margin-left: 50px;
@@ -17,18 +13,18 @@
 }
 
 @media (max-width: 600px) {
-    .about-row {
+    .contact-row {
         flex-direction: column;
         margin: 0px;
     }
-    .about-column{
+    .contact-column{
         width: 70%;
     }
 
-    .about-column img{
-        width: 100%;
+    #developerImage img {
+        width: 200px;
+        margin: 0px;
     }
-
 
     .profile-column {
         width: 100%;

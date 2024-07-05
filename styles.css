@@ -401,6 +401,9 @@ label {
     #footer-content {
         width:100%;
     }
+    #footer{
+        margin-top: 30px;
+    }
     .content-row{
         margin-left: 0px;
         margin-top: 0px;
